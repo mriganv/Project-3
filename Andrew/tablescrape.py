@@ -12,12 +12,20 @@ def scrape():
 
     table_url = "https://www.bls.gov/oes/current/oes_nat.htm"
     
-    table = pd.read_html(table_url)
+    tablehtml = pd.read_html(table_url)
 # https://download.bls.gov/pub/time.series/wm/wm.area
 # https://download.bls.gov/pub/time.series/wm/wm.occupation
 # https://www.bls.gov/help/hlpforma.htm#WM
+
+    tableraw = tablehtml[0]
+   
+    table = tableraw.to_html(index = False)
+
+    wagedict = {
+        "Table" : table
+    }
     browser.quit()
-    return table
+    return wagedict
     
 
 

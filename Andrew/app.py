@@ -7,17 +7,17 @@ import tablescrape
 app = Flask(__name__)
 
 # Create connection variable
-mongo = PyMongo(app, uri="mongodb://localhost:27017/mars_app")
+mongo = PyMongo(app, uri="mongodb://localhost:27017/wage_app")
 
 
 mongo.db.wage2020.drop()
 # Pass connection to the pymongo instance.
 
 
-@app.route("/")
-def index():
+@app.route("/wage2020")
+def wage2020():
     wage2020 = mongo.db.wage2020.find_one()
-    return render_template("index.html", wage = wage2020)
+    return render_template("wage2020.html", wage = wage2020)
 
 @app.route("/scrape")
 def scrape():
