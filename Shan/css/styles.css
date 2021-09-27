@@ -74,19 +74,7 @@
     scroll-behavior: smooth;
   }
 }
-.Mont{
-  font-family: 'Montserrat';
-  text-align: center;
-}
-.s1{
-  background: url("../assets/img/slide1.jpg")
-}
-.s2{
-  background: url("../assets/img/slide2.jpg")
-}
-.s3{
-  background: url("../assets/img/slide3.jpg")
-}
+
 body {
   margin: 0;
   font-family: var(--bs-body-font-family);
