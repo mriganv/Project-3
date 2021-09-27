@@ -1,0 +1,20 @@
+.container {
+    max-width: 1500px;
+}
+
+.tablelabel {
+    text-align: center;
+    font-weight: bold;
+
+}
+
+.wagetable {
+    text-align: center;
+
+}
+
+#wageframe {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+}

@@ -18,8 +18,12 @@ def scrape():
 # https://www.bls.gov/help/hlpforma.htm#WM
 
     tableraw = tablehtml[0]
+    tableraw = tableraw.drop([0, 1041])
+    tableraw = tableraw.rename(columns = {"Occupation title (click on the occupation title to view its profile)": "Occupation"})
+    filteredtable = tableraw.loc[:, ['Occupation', 'Employment', 'Employment per 1,000 jobs', 'Annual mean wage']]
+
    
-    table = tableraw.to_html(index = False)
+    table = filteredtable.to_html(index = False)
 
     wagedict = {
         "Table" : table
