@@ -1,35 +1,13 @@
-let filepath = "../../mwe-2020complete.xlsx"
+// let url = "https://web-visualizaton-project.s3.us-west-1.amazonaws.com/choroplethedit.csv"
+
+d3.csv('choroplethedit.csv', function(data) {
+    // Modify the files data
+    console.log(data)
+    // Do something with d3.js
+}); 
 
 
 
-function test(file) {
 
-    this.parseExcel = function(file) {
-      var reader = new FileReader();
-  
-      reader.onload = function(e) {
-        var data = e.target.result;
-        var workbook = XLSX.read(data, {
-          type: 'binary'
-        });
-  
-        workbook.SheetNames.forEach(function(sheetName) {
-          // Here is your object
-          var XL_row_object = XLSX.utils.sheet_to_row_object_array(workbook.Sheets[sheetName]);
-          var json_object = JSON.stringify(XL_row_object);
-          console.log(json_object);
-  
-        })
-  
-      };
-  
-      reader.onerror = function(ex) {
-        console.log(ex);
-      };
-  
-      reader.readAsBinaryString(file);
-    };
-  };
 
-test(filepath)
 
