@@ -14,6 +14,10 @@ def index():
     listings = mongo.db.listings.find_one()
     return render_template("index.html", listings=listings)
 
+@app.route("/slides")
+def slides():
+    return render_template("slides.html")
+
 
 @app.route("/scrape")
 def scraper():
