@@ -4,15 +4,15 @@
     color: white;
   }
   .s1{
-    background: url("../assets/img/slide1.jpg");
+    background: url("../img/slide1.jpg");
     background-size: cover; 
   }
   .s2{
-    background: url("../assets/img/slide1.jpg");
+    background: url("../img/slide2.jpg");
     background-size: cover; 
   }
   .s3{
-    background: url("../assets/img/slide1.jpg");
+    background: url("../img/slide3.jpg");
     background-size: cover; 
   }
 
