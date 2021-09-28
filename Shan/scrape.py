@@ -15,4 +15,5 @@ def scrape():
     result=soup.find_all('div',class_='Card-titleContainer')
     img=soup.find('img',class_='Card-mediaContainerInner')['src']
     latest=result[0].find('div').text
+    print(img)
     return{'Title':latest,'Image':img}
