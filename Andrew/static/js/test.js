@@ -38,7 +38,7 @@ d3.json(geoData).then(function(data) {
 
     // Binding a popup to each layer
     onEachFeature: function(feature, layer) {
-      layer.bindPopup(feature.properties.name + "<br>Occupations: " +
+      layer.bindPopup(feature.properties.name + "<br><hr>Number of Jobs: " +
         feature.properties.density);
     }
   }).addTo(myMap);
