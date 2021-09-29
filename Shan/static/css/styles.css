@@ -114,6 +114,20 @@ h1, .h1 {
     font-size: 2.5rem;
   }
 }
+.pos-f-t{
+  visibility:hidden;
+}
+
+@media (max-width: 1200px) {
+  .navbar-expand-lg{
+      visibility: hidden;
+      display:none;
+  }
+  .pos-f-t{
+    visibility:visible;
+    margin-top: -41px;
+  }
+}
 
 h2, .h2 {
   font-size: calc(1.325rem + 0.9vw);
