@@ -13,7 +13,8 @@ let traceData = [trace1,trace2];
 
 // Apply the group barmode to the layout
 let layout = {
-  title: "Job vs Major"
+  title: "Job vs Major",
+  barmode: 'group'
 };
 
 // Render the plot to the div tag with id "plot"
