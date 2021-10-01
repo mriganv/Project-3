@@ -1,7 +1,7 @@
 
 function init(){
     
-    d3.json('../../static/resources/indeed_jobs.json').then(function(response) {
+    d3.json('../static/resources/indeed_jobs.json').then(function(response) {
         var keys = Object.keys(response);
 
         var category_list = []
@@ -83,7 +83,7 @@ function updatePage(){
     var dataset = dropdownMenu.property("value");
 
     if(dataset == "Government"){
-        d3.json('../../static/resources/gov_jobs.json').then(function(response) {
+        d3.json('../static/resources/gov_jobs.json').then(function(response) {
             var keys = Object.keys(response);
     
             var department_list = []
@@ -174,7 +174,7 @@ function updatePage(){
         }); 
     }
     else if (dataset == "Private Sector"){
-        d3.json('../../static/resources/indeed_jobs.json').then(function(response) {
+        d3.json('../static/resources/indeed_jobs.json').then(function(response) {
             var keys = Object.keys(response);
     
             var category_list = []
