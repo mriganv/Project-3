@@ -12,10 +12,11 @@ function init() {
     }
 
     let trace1 = {
-        x: occupation1,
-        y: salary1,
+        x: salary1,
+        y: occupation1,
         text: job_freq1,
         type: 'bar',
+        orientation: 'h'
     };
 
     let data = [trace1]
@@ -28,11 +29,17 @@ function init() {
             text : 'Management Occupations',
 
         },
-        yaxis: {
+        xaxis: {
             title: {
                 text: 'Salary'
             }
         },
+        margin: {
+          t: 0,
+          l: 500,
+          r: 50,
+          },
+          height: 800,
     };
 
     Plotly.newPlot("plot", data, layout1)
