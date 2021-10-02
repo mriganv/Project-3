@@ -27,15 +27,32 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
     for (i=0;i<bigboi.length;i++) {
       let op=dropdown.append("option").text(bigboi[i].properties.jobs['Job characteristic code'])
-      op.property('value',i)
+      op.property('value',bigboi[i].properties.jobs['Job characteristic code'])
   }
     d3.selectAll("#selDataset").on("change", getData);
 
+
+    function getData(){
+
+
+      let myMap = L.map("map", {
+        center: [37.8, -96],
+        zoom: 5 ,
+        minZoom: 4,
+        // layers: [streets, geojson]
+      });
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        })
+        .addTo(myMap);
+      
+        geoData = "../static/resources/geojsons/newtest.geojson"
+
       // Create a new choropleth layer.
-    geojson = L.choropleth(data, {
+      geojson = L.choropleth(data, {
 
       // Define which property in the features to use.
-      valueProperty: "density",
+      valueProperty: bigboi[i].properties.jobs['Job characteristic code'],
 
       // Set the color scale.
       scale: ["#5ba3ff", "#301934"],
@@ -89,8 +106,10 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   //   Adding the legend to the map
     legend.addTo(myMap);
 
-  });
 
+ }
+  });
+ 
 
 
   // var baseMaps = {
