@@ -16,7 +16,8 @@ function init() {
         y: occupation1,
         text: job_freq1,
         type: 'bar',
-        orientation: 'h'
+        orientation: 'h',
+        marker: {color: 'rgb(55, 83, 109)'},
     };
 
     let data = [trace1]
@@ -27,19 +28,21 @@ function init() {
     let layout1 = {
         title: {
             text : 'Management Occupations',
-
+            
         },
         xaxis: {
             title: {
-                text: 'Salary'
+                text: 'Salary ($/yr)'
+                
             }
+          
         },
         margin: {
-          t: 0,
-          l: 500,
+          t: 150,
+          l: 600,
           r: 50,
           },
-          height: 800,
+          height: 1100,
     };
 
     Plotly.newPlot("plot", data, layout1)
@@ -313,6 +316,7 @@ function updatePlotly() {
         salary = salary1;
         layout = {
             title: "Management Occupations"
+            
         }
       }
     
@@ -486,8 +490,8 @@ function updatePlotly() {
 
 
     // Note the extra brackets around 'x' and 'y'
-    Plotly.restyle("plot", "x", [occupation]);
-    Plotly.restyle("plot", "y", [salary]);
+    Plotly.restyle("plot", "x", [salary]);
+    Plotly.restyle("plot", "y", [occupation]);
     Plotly.relayout("plot", layout)
 }
 
