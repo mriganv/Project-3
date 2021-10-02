@@ -1,6 +1,7 @@
 .Mont{
     font-family: 'Montserrat';
     text-align: center;
+    vertical-align: top;
     color: white;
   }
   .s1{
@@ -35,4 +36,29 @@
   /* Darker background on mouse-over */
   .btn:hover {
     background-color: RoyalBlue;
+  }
+ .chartDiv{
+            background-color: #fff;
+            display: block;
+            width: 345px;
+            height: 220px;
+            padding: 5px;
+            border-radius: 2px 2px 2px 2px;
+            -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+            -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+        }
+
+.bottomDiv
+        {
+           position:relative;
+           background-color: #fff;
+           bottom:150px;
+           left:150px;
+        }
+  .center {
+          margin: auto;
+          width: 50%;
+          border: 3px solid green;
+          padding: 10px;
   }
