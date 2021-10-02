@@ -3,6 +3,9 @@
 ## US Job Market Analysis
 
 ## Project description
+* Analysis on recent US job market
+* Comparison analysis on College major vs Opening job titles
+* Comparison analysis on gov jobs vs private sector jobs
 
 ### [Data Resources](https://github.com/mriganv/Project-3/tree/main/MAIN/static/resources)
 
