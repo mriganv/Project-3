@@ -46,9 +46,9 @@
 // }
 
 
-window.onload = function () {
 
-  var chart = new CanvasJS.Chart("plot", {
+
+  var chart = new CanvasJS.Chart("plot3", {
     animationEnabled: true,
     title:{
       text: "Number of jobs availible per level of Education",
@@ -76,4 +76,4 @@ window.onload = function () {
   });
   chart.render();
   
-  }
+  
