@@ -2,14 +2,17 @@
 let myMap = L.map("map", {
     center: [37.8, -96],
     zoom: 5 ,
-    minZoom: 4
+    minZoom: 4,
+    // layers: [streets, geojson]
   });
 
 
+
 // Adding the tile layer
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+let streets = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-}).addTo(myMap);
+})
+.addTo(myMap);
 
 
 
@@ -18,7 +21,8 @@ geoData = "../static/resources/geojsons/test.geojson"
 
 
 
-// let geojson;
+
+
 
 d3.json(geoData).then(function(data) {
 
@@ -48,7 +52,8 @@ d3.json(geoData).then(function(data) {
       layer.bindPopup(feature.properties.name + "<br><hr>Number of Jobs: " +
         feature.properties.density);
     }
-  }).addTo(myMap);
+  })
+  .addTo(myMap)
 
 
   // Set up the legend.
@@ -76,11 +81,24 @@ d3.json(geoData).then(function(data) {
     return div;
   };
 
-  // Adding the legend to the map
+//   Adding the legend to the map
   legend.addTo(myMap);
 
 });
 
+
+
+var baseMaps = {
+    "Streets": streets
+};
+
+// var overlayMaps = {
+//     "Test": geojson
+// };
+
+L.control.layers(baseMaps
+    // , overlayMaps
+   ).addTo(myMap);
 
 
 

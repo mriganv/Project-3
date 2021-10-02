@@ -1,20 +1,20 @@
 // Initializes the page with a default plot
 function init() {
-    let occupation1 = []
-    let salary1 = []
-    let job_freq1 = []
+    let occupation0 = []
+    let salary0 = []
+    let job_freq0 = []
 
-    for (let i = 0; i < management.length; i++) {
-        row = management[i];
-        occupation1.push(row.Occupation);
-        salary1.push(row.Salary);
-        job_freq1.push('Job Frequency per 1000 jobs: ' + row.Job_Frequency)
+    for (let i = 0; i < mainoccupations.length; i++) {
+        row = mainoccupations[i];
+        occupation0.push(row.Occupation);
+        salary0.push(row.Salary);
+        job_freq0.push('Job Frequency per 1000 jobs: ' + row.Job_Frequency)
     }
 
     let trace1 = {
-        x: salary1,
-        y: occupation1,
-        text: job_freq1,
+        x: salary0,
+        y: occupation0,
+        text: job_freq0,
         type: 'bar',
         orientation: 'h',
         marker: {color: 'rgb(55, 83, 109)'},
@@ -25,10 +25,9 @@ function init() {
 
     //  https://plotly.com/javascript/reference/layout/#layout-title
     //  https://plotly.com/javascript/reference/layout/xaxis/
-    let layout1 = {
+    let layout0 = {
         title: {
-            text : 'Management Occupations',
-            
+            text : 'Salary by Industry',   
         },
         xaxis: {
             title: {
@@ -45,10 +44,21 @@ function init() {
           height: 1100,
     };
 
-    Plotly.newPlot("plot", data, layout1)
+    Plotly.newPlot("plot", data, layout0)
 }
 
 //  setting up all occupation lists
+let occupation0 = []
+let salary0 = []
+let job_freq0 = []
+
+for (let i = 0; i < mainoccupations.length; i++) {
+    row = mainoccupations[i];
+    occupation0.push(row.Occupation);
+    salary0.push(row.Salary);
+    job_freq0.push('Job Frequency per 1000 jobs: ' + row.Job_Frequency)
+    }
+
 let occupation1 = []
 let salary1 = []
 let job_freq1 = []
@@ -291,12 +301,6 @@ for (let i = 0; i < management.length; i++) {
                                                                                         job_freq22.push('Job Frequency per 1000 jobs: ' + row.Job_Frequency)
                                                                                         }
 
-                                                                                
-
-        
-    
-
-
 // Call updatePlotly() when a change takes place to the DOM
 d3.selectAll("#selDataset").on("change", updatePlotly);
 // This function is called when a dropdown menu item is selected
@@ -311,12 +315,20 @@ function updatePlotly() {
     var salary = [];
     var layout = {}
 
-    if (dataset === 'management') {
+
+    if (dataset === 'mainoccupations') {
+      occupation = occupation0;
+      salary = salary0;
+      layout = {
+          title: "Salary by Industry"   
+      }
+    }
+
+    else if (dataset === 'management') {
         occupation = occupation1;
         salary = salary1;
         layout = {
-            title: "Management Occupations"
-            
+            title: "Management Occupations"   
         }
       }
     
