@@ -1,28 +1,29 @@
 from flask import Flask, render_template, redirect
 from flask_pymongo import PyMongo
-import scrape_mars
+import scrape
 
 app = Flask(__name__)
 
 # Use flask_pymongo to set up mongo connection
-app.config["MONGO_URI"] = "mongodb://localhost:27017/mars_app"
+app.config["MONGO_URI"] = "mongodb://localhost:27017/job_news"
 mongo = PyMongo(app)
 mongo.db.listings.drop()
-# Or set inline
-# mongo = PyMongo(app, uri="mongodb://localhost:27017/phone_app")
-
 
 @app.route("/")
 def index():
     listings = mongo.db.listings.find_one()
     return render_template("index.html", listings=listings)
 
+@app.route("/slides")
+def slides():
+    return render_template("slides.html")
+
 
 @app.route("/scrape")
 def scraper():
     mongo.db.listings.drop()
     listings = mongo.db.listings
-    listings_data = scrape_mars.scrape()
+    listings_data = scrape.scrape()
     listings.update({}, listings_data, upsert=True)
     return redirect("/", code=302)
 

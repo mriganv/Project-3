@@ -17,13 +17,16 @@ mongo.db.wage2020.drop()
 @app.route("/")
 def index():
     wage2020 = mongo.db.wage2020.find_one()
-    return render_template("index.html", wage = wage2020)
-
-@app.route("/scrape")
-def scrape():
+    
     wage_data = tablescrape.scrape()
     mongo.db.wage2020.update({}, wage_data, upsert = True)
-    return redirect("/", code= 302)
+    return render_template("index.html", wage = wage2020) 
+
+    # return redirect("/", code= 302)
+
+# @app.route("/scrape")
+# def scrape():
+    
 
 if __name__ == "__main__":
     app.run(debug=True)

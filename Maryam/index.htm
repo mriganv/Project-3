@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dropdown Events</title>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <h2>This visualization made through a dataset contains 10K+ records by bundling all job data that was available for the year 2021 up until May 2021021
+    </h2>
+    <h1>Use the Drop-Down menu to dig through findings.</h1>
+    <select id="selDataset">
+        <option value="dataset1">Skills Needed The Most</option>
+        <option value="dataset2">Job Counts per City</option>
+        <option value="dataset3">Jobs Counts by the level of education</option>
+      </select>
+    
+    <div id="plot"></div>
+
+    <script src="plots.js"></script>
+    <script src="plot_skill.js"></script>
+    <script src="plot_per_city.js"></script>
+    <script src="plot_education.js"></script>
+</body>
+</html>

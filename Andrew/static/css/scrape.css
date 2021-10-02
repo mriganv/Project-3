@@ -1,5 +1,5 @@
 .container {
-    max-width: 1500px;
+    max-width: 1200px;
 }
 
 .tablelabel {
@@ -9,7 +9,9 @@
 }
 
 .wagetable {
-    text-align: center;
+    text-align: right;
+    text-align-last: auto;
+    
 
 }
 
@@ -18,3 +20,4 @@
     margin-right: auto;
     margin-top: 50px;
 }
+
