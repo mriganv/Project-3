@@ -1,6 +1,6 @@
 # Project-3
 
-## Job Market Analysis in USA
+## US Job Market Analysis
 
 ## Project description
 
