@@ -1,11 +1,11 @@
-let High_school =0
-let Bachelors=0
-let Associat=0
-let other=0
-let Vocational=0
-let None=0
-let Masters=0
-let phd=0
+// let High_school =0
+// let Bachelors=0
+// let Associat=0
+// let other=0
+// let Vocational=0
+// let None=0
+// let Masters=0
+// let phd=0
 
 // for( let i=0; i<BestJobs.lenghth;i++){
 //     let job= BestJobs[i]
@@ -26,24 +26,54 @@ let phd=0
 //         other+=1}
 // }
 
-let degree =["No Degree","High School","Associate's Degree","Vocational Certificate","Bachelor's Degree","Master's Degree","Ph.D. or Doctorate","Other Degrees"]
-let degree_count=[111,3024,765,168,1551,130,25]
+// let degree =["No Degree","High School","Associate's Degree","Vocational Certificate","Bachelor's Degree","Master's Degree","Ph.D. or Doctorate","Other Degrees"]
+// let degree_count=[111,3024,765,168,1551,130,25,381]
 
-function plotEducation(x,y){
-    let trace1 = {
-      x: x,
-      y: y,
-      type: "bar"
-    }
+// function plotEducation(x,y){
+//     let trace1 = {
+//       x: x,
+//       y: y,
+//       type: "bar"
+//     }
 
-    let data=[trace1]
+//     let data=[trace1]
 
-    let layout={
-        title:"Number of jobs availible per level of Education"
-    };
+//     let layout={
+//         title:"Number of jobs availible per level of Education"
+//     };
 
-    Plotly.newPlot("plot",data,layout);
-}
+//     Plotly.newPlot("plot",data,layout);
+// }
 
 
+//window.onload = function () {
 
+  var chart = new CanvasJS.Chart("chartContainer", {
+    animationEnabled: true,
+    title:{
+      text: "Number of jobs availible per level of Education",
+      horizontalAlign: "left"
+    },
+    data: [{
+      type: "doughnut",
+      startAngle: 120,
+      //innerRadius: 60,
+      indexLabelFontSize: 17,
+      indexLabel: "{label} - #percent%",
+      toolTipContent: "<b>{label}:</b> {y} (#percent%)",
+      dataPoints: [
+        { y: 111, label: "No Degree" },
+        { y: 3024, label: "High School" },
+        { y: 765, label: "Associate's Degree" },
+        { y: 168, label: "Vocational Certificate"},
+        { y: 1551, label: "Bachelor's Degree"},
+        { y: 130, label: "Master's Degree"},
+        { y: 130, label: "Ph.D. or Doctorate"},
+        { y: 25, label: "Other Degrees"}
+      
+      ]
+    }]
+  });
+  
+  
+  //}

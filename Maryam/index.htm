@@ -9,9 +9,12 @@
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 </head>
 <body>
+    
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
     <h2>This visualization made through a dataset contains 10K+ records by bundling all job data that was available for the year 2021 up until May 2021021
     </h2>
     <h1>Use the Drop-Down menu to dig through findings.</h1>
+    
     <select id="selDataset">
         <option value="dataset1">Skills Needed The Most</option>
         <option value="dataset2">Job Counts per City</option>
@@ -19,10 +22,12 @@
       </select>
     
     <div id="plot"></div>
+    <div id="chartContainer" style="height: 370px; width: 100%;"></div>
 
     <script src="plots.js"></script>
     <script src="plot_skill.js"></script>
     <script src="plot_per_city.js"></script>
     <script src="plot_education.js"></script>
+    
 </body>
 </html>

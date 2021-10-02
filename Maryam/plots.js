@@ -18,7 +18,7 @@ function updatePlotly() {
       
     }
     else if (dataset === 'dataset3') {
-      plotEducation(degree,degree_count)
+      chart.render();
 
       }
   
