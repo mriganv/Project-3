@@ -14,7 +14,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 
 
-geoData = "../static/resources/geojsons/states.geojson"
+geoData = "../static/resources/geojsons/newtest.geojson"
 
 
 
