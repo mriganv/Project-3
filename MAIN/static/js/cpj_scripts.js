@@ -33,6 +33,12 @@ let traceRegions = [trace2];
 Plotly.newPlot("regionsbar",traceRegions, layout1);
 
 // **********************************************************************************************
+var trace4 = {
+  y: doctorateData.Doctorates_states,
+  x: doctorateData.Doctorates_counts, 
+  marker: {color: 'rgb(41,0,151)'},
+  type: 'bar',
+};
 
 var trace3 = {
   x: mastersData.Masters_states,
@@ -41,21 +47,15 @@ var trace3 = {
   type: 'bar'
 };
 
-var data = [trace3];
+var data = [trace3,trace4];
 
 var layoutmasters = {
-  title: 'Jobs openings for Masters Degree'}
+  title: 'Jobs openings for Masters and PhD Degree'}
 
 Plotly.newPlot('mastersbar', data, layoutmasters);
 
 // ************************************************************************************************
 
-var trace4 = {
-  x: doctorateData.Doctorates_states,
-  y: doctorateData.Doctorates_counts, 
-  marker: {color: 'rgb(41,0,151)'},
-  type: 'bar',
-};
 
 var data1 = [trace4];
 

@@ -19,7 +19,7 @@ let mastersData = {
                   
 let doctorateData = {
     Doctorate_counts :[5, 4, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
-  Doctorates_states: ['CA', 'IL', 'OH', 'NJ', 'TX', 'IA', 'MD', 'MN', 'OK', 'PA', 'ID', 'MA', 'PR', 'LA', 'MI'], 
+  Doctorates_states: ['CA', 'IL', 'OH', 'NJ', 'TX', 'IA', 'MD', 'MN', 'OK', 'PA', 'ID', 'MA', 'PR', 'LA', 'MI'],
 };
 
 
