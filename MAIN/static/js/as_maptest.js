@@ -55,7 +55,7 @@ geoData = "../static/resources/geojsons/newtest.geojson"
         })
         .addTo(myMap1);
       let v=dropdown.property('value');
-
+      
       
         geoData = "../static/resources/geojsons/newtest.geojson"
 
@@ -83,7 +83,7 @@ geoData = "../static/resources/geojsons/newtest.geojson"
       // Binding a popup to each layer
       onEachFeature: function(feature, layer) {
         layer.bindPopup(feature.properties.name + "<br><hr>Number of Jobs: " +
-          feature.properties.v);
+          feature.properties[v]);
       }
     })
     .addTo(myMap1)
