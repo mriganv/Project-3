@@ -82,8 +82,12 @@ geoData = "../static/resources/geojsons/newtest.geojson"
 
       // Binding a popup to each layer
       onEachFeature: function(feature, layer) {
-        layer.bindPopup(feature.properties.name + "<br><hr>Number of Jobs: " +
-          feature.properties[v]);
+        if( feature.properties[v]!== undefined){
+            layer.bindPopup(feature.properties.name + "<br><hr>Number of Jobs: " +
+            feature.properties[v]);
+        }else{
+          layer.bindPopup(feature.properties.name + "<br><hr>Number of Jobs: 0");
+        }
       }
     })
     .addTo(myMap1)
