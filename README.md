@@ -24,15 +24,17 @@
 * (feel free to add if I missed any here, and also when we decide on deploying we can add more)
 
 ### Table of Contents:
-
-
-
-
-
+* Homepage: Displays current events in the Jobs World
+* Graphs: Displays graphs depicting correlations and providing further analysis 
+* Map: Displays occupations by location and provides further analysis
+* College Major Comparison: 
+* Data:
 
 ## Our Team
 
 * [Marta Woodkowski](https://github.com/MartaWoodkowski)
 * [Chithra Priya Janardhana](https://github.com/mriganv)
+* [Shan Jiang](https://github.com/FrankJiang1208)
+* [Maryam Hejripour](https://github.com/mforoohi)
 * [Andrew Su](https://github.com/isoju)
-* (Include your links here)
+
