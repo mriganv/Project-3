@@ -19,3 +19,17 @@ let layout = {
 
 // Render the plot to the div tag with id "plot"
 Plotly.newPlot("plot", traceData, layout);
+
+let trace3={
+  x:comp_data.job_num,
+  y: comp_data.major_num,
+  type:'scatter'
+}
+
+let traceData1 = [trace3];
+
+let layout1 = {
+  title: "Job vs Major",
+};
+
+Plotly.newPlot("plot4", traceData1, layout1);

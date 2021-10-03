@@ -3,3 +3,8 @@ let major_data={
     major:['Business', 'Computer sciences', 'Engineering', 'Communication', 'Transportation', 'Education', 'Architecture', 'Multidiscipline', 'English and literature', 'Homeland security', 'Bio sciences', 'law enforcement', 'Legal', 'consumer sciences'],
     job_titles:[8359, 2242, 2231, 1487, 1350, 1144, 621, 589, 355, 312, 272, 239, 200, 186]
 }
+
+let comp_data={
+    major_num:[591289, 47891, 187512, 103574, 5837, 243398, 16372, 64919, 48826, 250, 147259, 67642, 48115, 27534],
+    job_num:[8359, 2242, 2231, 1487, 1350, 1144, 621, 589, 355, 312, 272, 239, 200, 186]
+}
