@@ -19,7 +19,6 @@ geoData = "../static/resources/geojsons/newtest.geojson"
   d3.json(geoData).then(function(data) {
 
     const bigboi = data.features
-    console.log(bigboi);
     keys=Object.keys(bigboi[0].properties.jobs['Job characteristic code'])
     dropdown=d3.select("#selDataset");
 
@@ -42,7 +41,6 @@ geoData = "../static/resources/geojsons/newtest.geojson"
 
     function getData(){
       let v=dropdown.property('value');
-      console.log(v)
 
       
         geoData = "../static/resources/geojsons/newtest.geojson"
