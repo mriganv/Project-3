@@ -86,6 +86,7 @@ geoData = "../static/resources/geojsons/newtest.geojson"
             layer.bindPopup(feature.properties.name + "<br><hr>Number of Jobs: " +
             feature.properties[v]);
         }else{
+          console.log(feature.properties[v])
           layer.bindPopup(feature.properties.name + "<br><hr>Number of Jobs: 0");
         }
       }
