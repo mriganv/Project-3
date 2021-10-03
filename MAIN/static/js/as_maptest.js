@@ -10,14 +10,23 @@
 //   .addTo(myMap);
 
 geoData = "../static/resources/geojsons/newtest.geojson"
-    
+   
     
   let geojson;
 
 
 
   d3.json(geoData).then(function(data) {
-
+    let myMap = L.map("map", {
+        center: [37.8, -96],
+        zoom: 5 ,
+        minZoom: 4,
+        // layers: [streets, geojson]
+      });
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        })
+        .addTo(myMap);
     const bigboi = data.features
     keys=Object.keys(bigboi[0].properties.jobs['Job characteristic code'])
     dropdown=d3.select("#selDataset");
@@ -26,20 +35,25 @@ geoData = "../static/resources/geojsons/newtest.geojson"
       let op=dropdown.append("option").text(keys[i])
       op.property('value',keys[i])
   }
-  let myMap = L.map("map", {
-    center: [37.8, -96],
-    zoom: 5 ,
-    minZoom: 4,
-    // layers: [streets, geojson]
-  });
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-    })
-    .addTo(myMap);
+  
+
     d3.selectAll("#selDataset").on("change", getData);
 
 
     function getData(){
+      map.remove();
+      div=d3.select('body').append("div").attr("id","map")
+      dropdown=d3.select("#selDataset"); 
+      let myMap1 = L.map("map", {
+        center: [37.8, -96],
+        zoom: 5 ,
+        minZoom: 4,
+        // layers: [streets, geojson]
+      });
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        })
+        .addTo(myMap1);
       let v=dropdown.property('value');
 
       
@@ -69,10 +83,10 @@ geoData = "../static/resources/geojsons/newtest.geojson"
       // Binding a popup to each layer
       onEachFeature: function(feature, layer) {
         layer.bindPopup(feature.properties.name + "<br><hr>Number of Jobs: " +
-          feature.properties.density);
+          feature.properties.v);
       }
     })
-    .addTo(myMap)
+    .addTo(myMap1)
 
 
   //   // Set up the legend.
