@@ -2,9 +2,16 @@
 
 ## Project Description
 * Analysis on recent US job market
+   * Webscraping: 
 * Comparison analysis on college major vs opening job titles
-* Comparison analysis on government jobs vs private sector jobs
+   * Bar: 
+* Comparison analysis on government jobs (~10,000 records) vs private/public sector jobs (~30,000 records)
+   * Map: clustered markers & customized markers via Leaflet
+   * Bar: animated and distributed by job categories and US departments via [CanvasJS](https://canvasjs.com/javascript-charts/animated-chart/)
 * Analysis on salary by industry and occupation (2020)
+   * Bar: animated and distributed by industry and occupation via Plotly
+* Statistical analysis on Occupations by state (2020)
+   * Map: choropleth layers sorted by occupation via Leaflet
 
 ### Data Resources:
 
@@ -17,18 +24,13 @@
 ### Technologies used:
 
 * Python: Pandas and Matplotlib
-* Javascript: (insert library names here)
-* HTML & CSS
+* Javascript: Plotly, D3, Leaflet, [CanvasJS](https://canvasjs.com/javascript-charts/animated-chart/)
+* HTML & CSS: Bootstrap
 * API calls
 * JSON & GEOJSON
-* (feel free to add if I missed any here, and also when we decide on deploying we can add more)
+* [Geolocation](https://medium.com/analytics-vidhya/how-to-generate-lat-and-long-coordinates-of-city-without-using-apis-25ebabcaf1d5): generates latitude and longitude coordinates
 
-### Table of Contents:
-* Homepage: Displays current events in the Jobs World
-* Graphs: Displays graphs depicting correlations and providing further analysis 
-* Map: Displays occupations by location and provides further analysis
-* College Major Comparison: 
-* Data:
+
 
 ## Our Team
 
