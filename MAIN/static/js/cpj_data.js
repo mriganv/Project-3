@@ -11,16 +11,16 @@ regions_count: [12, 141, 83, 296, 833, 115, 117, 43, 34, 762, 554, 20, 113, 45, 
 
 }; 
 
-let mastersData = {
-  Masters_counts: [18,17,12,8,7,6,6,5,5,5,5,4,4,3,3,3,2,2,2,2,2,1,1,1,1,1,1,1],
-  Masters_states:['CA', 'GA', 'FL', 'TX', 'MO', 'PA', 'NY', 'IL', 'VA', 'MA', 'NJ', 'MD', 'IN', 'TN', 'NC', 'OR', 'NH', 'MI', 'SC', 'CO', 'AL', 'WA', 'NM', 'DC', 'MN', 'ID', 'AZ', 'OH'],
 
+<<<<<<< HEAD
 };
                   
 let doctorateData = {
     Doctorate_counts :[0, 0,  5, 0, 0, 0, 0, 1, 1, 4, 0, 1, 1, 1, 1, 1, 0, 0, 0, 2, 0,0, 2, 1, 0,1, 1, 0, 0,2, 0, 0],
   Doctorates_states:['AL', 'AZ', 'CA', 'CO', 'DC', 'FL', 'GA', 'IA', 'ID', 'IL', 'IN', 'LA', 'MA', 'MD', 'MI', 'MN', 'MO', 'NC', 'NH', 'NJ', 'NM', 'NY', 'OH', 'OK', 'OR', 'PA', 'PR', 'SC', 'TN', 'TX', 'VA', 'WA'],
 };
+=======
+>>>>>>> f94b4435ff5d4235e22dd16336cc4b6700ed3fab
 
 
 
