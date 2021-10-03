@@ -1,3 +1,9 @@
+// ****************************************************************************************
+
+// Bar Chart - Jop Openings based the degree 
+
+// ****************************************************************************************
+
 let trace1 = {
     x: degreeData.degrees_list,
     y: degreeData.degree_counts,
@@ -14,6 +20,12 @@ let trace1 = {
 
   Plotly.newPlot("degreebar", traceData, layout);
 
+
+
+// **********************************************************************************************
+
+//  Bar Chart for Job Openings in each State
+
 // **********************************************************************************************
 
 let trace2 = {
@@ -25,43 +37,40 @@ let trace2 = {
   };
 
   let layout1 = {
-  title: "Available Jobs in each state"
+  title: "Jobs Available in each state"
 };
 
 let traceRegions = [trace2];
 
 Plotly.newPlot("regionsbar",traceRegions, layout1);
 
+
+
 // **********************************************************************************************
-var trace4 = {
-  y: doctorateData.Doctorates_states,
-  x: doctorateData.Doctorates_counts, 
-  marker: {color: 'rgb(41,0,151)'},
-  type: 'bar',
-};
+
+//  Bar Chart - Masters Degree and Doctors Degree openings in each state
+
+// **********************************************************************************************
+
 
 var trace3 = {
-  x: mastersData.Masters_states,
-  y: mastersData.Masters_counts,
-  marker: {color: 'rgb(0, 128, 128)'},
+  x: ['CA', 'GA', 'FL', 'TX', 'IL', 'NJ', 'MO', 'PA', 'MA', 'NY', 'MD', 'VA', 'IN', 'TN', 'OH', 'MI', 'NC', 'OR', 'AL', 'MN', 'NH', 'CO', 'SC', 'ID', 'OK', 'AZ', 'DC', 'IA', 'NM' , 'PR', 'WA', 'LA'],
+  y: [5,0,0,2,4,2,0,1,1,0,1,0,0,0,2,1,0,0,0,1,0,0,0,1,1,0,0,1,0,1,0,1],
+  name: 'Doctorate Openings',
   type: 'bar'
 };
 
-var data = [trace3,trace4];
+var trace4 = {
+  x: ['CA', 'GA', 'FL', 'TX', 'IL', 'NJ', 'MO', 'PA', 'MA', 'NY', 'MD', 'VA', 'IN', 'TN', 'OH', 'MI', 'NC', 'OR', 'AL', 'MN', 'NH', 'CO', 'SC', 'ID', 'OK', 'AZ', 'DC', 'IA', 'NM' , 'PR', 'WA', 'LA'],
+  y: [18, 17, 12, 8, 5, 5,7, 6,   5, 6, 4, 5, 4, 3, 1, 2, 3, 3, 2, 1, 2, 2, 2, 1, 0, 1, 1, 0, 1, 0, 1,  0],
+  name: 'Masters Openings',
+  type: 'bar'
+};
 
-var layoutmasters = {
-  title: 'Jobs openings for Masters and PhD Degree'}
+var data = [trace3, trace4];
 
-Plotly.newPlot('mastersbar', data, layoutmasters);
+var layoutbar = {barmode: 'group', title: "Job Openings for Masters and Doctorate Degree holders"};
 
-// ************************************************************************************************
+Plotly.newPlot('mastersbar', data, layoutbar);
 
 
-var data1 = [trace4];
-
-var layoutdoctorate = {
-  title: 'Jobs openings for Doctorate Degree'}
-
-Plotly.newPlot('doctoratebar', data1, layoutdoctorate);
-
-// **************************************************************************************************

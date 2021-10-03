@@ -11,16 +11,7 @@ regions_count: [12, 141, 83, 296, 833, 115, 117, 43, 34, 762, 554, 20, 113, 45, 
 
 }; 
 
-let mastersData = {
-  Masters_counts: [18,17,12,8,7,6,6,5,5,5,5,4,4,3,3,3,2,2,2,2,2,1,1,1,1,1,1,1],
-  Masters_states:['CA', 'GA', 'FL', 'TX', 'MO', 'PA', 'NY', 'IL', 'VA', 'MA', 'NJ', 'MD', 'IN', 'TN', 'NC', 'OR', 'NH', 'MI', 'SC', 'CO', 'AL', 'WA', 'NM', 'DC', 'MN', 'ID', 'AZ', 'OH'],
 
-};
-                  
-let doctorateData = {
-    Doctorate_counts :[5, 4, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
-  Doctorates_states: ['CA', 'IL', 'OH', 'NJ', 'TX', 'IA', 'MD', 'MN', 'OK', 'PA', 'ID', 'MA', 'PR', 'LA', 'MI'],
-};
 
 
   
