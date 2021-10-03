@@ -47,15 +47,6 @@ Plotly.newPlot("regionsbar",traceRegions, layout1);
 
 
 // **********************************************************************************************
-<<<<<<< HEAD
-var trace4 = {
-  x: doctorateData.Doctorates_states,
-  y: doctorateData.Doctorates_counts, 
-  marker: {color: 'rgb(41,0,151)'},
-  type: 'bar',
-};
-=======
->>>>>>> f94b4435ff5d4235e22dd16336cc4b6700ed3fab
 
 //  Bar Chart - Masters Degree and Doctors Degree openings in each state
 

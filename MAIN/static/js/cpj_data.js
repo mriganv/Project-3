@@ -12,15 +12,6 @@ regions_count: [12, 141, 83, 296, 833, 115, 117, 43, 34, 762, 554, 20, 113, 45, 
 }; 
 
 
-<<<<<<< HEAD
-};
-                  
-let doctorateData = {
-    Doctorate_counts :[0, 0,  5, 0, 0, 0, 0, 1, 1, 4, 0, 1, 1, 1, 1, 1, 0, 0, 0, 2, 0,0, 2, 1, 0,1, 1, 0, 0,2, 0, 0],
-  Doctorates_states:['AL', 'AZ', 'CA', 'CO', 'DC', 'FL', 'GA', 'IA', 'ID', 'IL', 'IN', 'LA', 'MA', 'MD', 'MI', 'MN', 'MO', 'NC', 'NH', 'NJ', 'NM', 'NY', 'OH', 'OK', 'OR', 'PA', 'PR', 'SC', 'TN', 'TX', 'VA', 'WA'],
-};
-=======
->>>>>>> f94b4435ff5d4235e22dd16336cc4b6700ed3fab
 
 
 
