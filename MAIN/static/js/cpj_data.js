@@ -18,12 +18,11 @@ let mastersData = {
 };
                   
 let doctorateData = {
-    Doctorate_counts :[5, 4, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
-  Doctorates_states: ['CA', 'IL', 'OH', 'NJ', 'TX', 'IA', 'MD', 'MN', 'OK', 'PA', 'ID', 'MA', 'PR', 'LA', 'MI'],
+    Doctorate_counts :[0, 0,  5, 0, 0, 0, 0, 1, 1, 4, 0, 1, 1, 1, 1, 1, 0, 0, 0, 2, 0,0, 2, 1, 0,1, 1, 0, 0,2, 0, 0],
+  Doctorates_states:['AL', 'AZ', 'CA', 'CO', 'DC', 'FL', 'GA', 'IA', 'ID', 'IL', 'IN', 'LA', 'MA', 'MD', 'MI', 'MN', 'MO', 'NC', 'NH', 'NJ', 'NM', 'NY', 'OH', 'OK', 'OR', 'PA', 'PR', 'SC', 'TN', 'TX', 'VA', 'WA'],
 };
 
 
-  
 
 
 

@@ -34,8 +34,8 @@ Plotly.newPlot("regionsbar",traceRegions, layout1);
 
 // **********************************************************************************************
 var trace4 = {
-  y: doctorateData.Doctorates_states,
-  x: doctorateData.Doctorates_counts, 
+  x: doctorateData.Doctorates_states,
+  y: doctorateData.Doctorates_counts, 
   marker: {color: 'rgb(41,0,151)'},
   type: 'bar',
 };
