@@ -21,7 +21,7 @@ let count=[2503,2070,1949,1670,1560,1555,1202,1062,881,876,842,840,839,829,814,7
                 let data=[trace1]
             
                 let layout={
-                    title:"most in-demand skills you should look to develop"
+                    title:"Most In-Demand Skills"
                 };
             
                 Plotly.newPlot("plot1",data,layout);
