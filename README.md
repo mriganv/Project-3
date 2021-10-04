@@ -26,9 +26,9 @@
 * Python: Pandas and Matplotlib
 * Javascript: Plotly, D3, Leaflet, [CanvasJS](https://canvasjs.com/javascript-charts/animated-chart/)
 * HTML & CSS: Bootstrap
-* API calls
 * JSON & GEOJSON
 * [Geolocation](https://medium.com/analytics-vidhya/how-to-generate-lat-and-long-coordinates-of-city-without-using-apis-25ebabcaf1d5): generates latitude and longitude coordinates
+* Excel
 
 
 

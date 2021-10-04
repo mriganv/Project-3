@@ -51,7 +51,7 @@
   var chart = new CanvasJS.Chart("plot3", {
     animationEnabled: true,
     title:{
-      text: "Number of jobs availible per level of Education",
+      text: "Number of Jobs Available per Level of Education",
       horizontalAlign: "left"
     },
     data: [{

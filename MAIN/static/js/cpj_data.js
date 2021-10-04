@@ -1,6 +1,6 @@
 
 let degreeData={
-    degrees_list :['Other', 'Associates Degree', 'Bachelors Degree', 'Doctorate', 'High School', 'Masters Degree', 'Vocational Certificate'],
+    degrees_list :['Other', "Associate's Degree", "Bachelor's Degree", 'Doctorate', 'High School', "Master's Degree", 'Vocational Certificate'],
     degree_counts:[4830, 767, 1547, 25, 3023, 128, 168]
 };
 
