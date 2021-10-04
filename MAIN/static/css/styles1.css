@@ -41,14 +41,14 @@ span{
           position:relative;
           background-color: #fff;
           width: 800px;
-          height: 500px;
+          height: 490px;
 
       }
 .bottomDiv
       {
          background-color: #fff;
          width: 400px;
-         height: 100px;
+         height: 80px;
          top:30px
       }
 .center {
