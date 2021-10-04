@@ -23,7 +23,7 @@
 
 ### Technologies used:
 
-* Python: Pandas, Matplotlib, [Nominatim and geopy](https://medium.com/analytics-vidhya/how-to-generate-lat-and-long-coordinates-of-city-without-using-apis-25ebabcaf1d5) for geolocation
+* Python: Pandas, Matplotlib, [Nominatim and geopy](https://medium.com/analytics-vidhya/how-to-generate-lat-and-long-coordinates-of-city-without-using-apis-25ebabcaf1d5)(for geolocation)
 * Javascript: Plotly, D3, Leaflet, [CanvasJS](https://canvasjs.com/javascript-charts/animated-chart/)
 * HTML & CSS: Bootstrap
 * JSON & GEOJSON
