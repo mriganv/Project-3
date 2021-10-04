@@ -18,6 +18,15 @@ def index():
 def slides():
     return render_template("slides.html")
 
+@app.route("/job_market")
+def jm():
+    return render_template("mw_job_market.html")
+
+@app.route("/job_cat")
+def jc():
+    return render_template("mw_map.html")
+
+
 
 @app.route("/scrape")
 def scraper():
