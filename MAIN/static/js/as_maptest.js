@@ -76,7 +76,7 @@ geoData = "../static/resources/geojsons/newtest.geojson"
   })
   .addTo(myMap1)
     //   // Set up the legend.
-    var legend = L.control({ position: "topright" });
+    var legend = L.control({ position: "topleft" });
     legend.onAdd = function() {
       var div = L.DomUtil.create("div", "info legend");
       var limits = geojson.options.limits;
@@ -165,7 +165,7 @@ geoData = "../static/resources/geojsons/newtest.geojson"
 
 
   //   // Set up the legend.
-  var legend = L.control({ position: 'topright' });
+  var legend = L.control({ position: 'topleft' });
      legend.onAdd = function() {
        var div = L.DomUtil.create("div", "info legend");
        var limits = geojson.options.limits;
