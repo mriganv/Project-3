@@ -29,8 +29,8 @@
                               </a>
                               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li><a class="dropdown-item" href="{{ url_for('slides') }}">Visualization Slides</a></li>
-                                <li><a class="dropdown-item" href="{{ url_for('jm') }}">Job Market</a></li>
-                                <li><a class="dropdown-item" href="{{ url_for('jc') }}">Jobs by Category</a></li>
+                                <li><a class="dropdown-item" href="{{ url_for('jc') }}">Job Market</a></li>
+                                <li><a class="dropdown-item" href="{{ url_for('jm') }}">Jobs by Category</a></li>
                                 <li><a class="dropdown-item" href="{{ url_for('ei') }}">Employment Distribution</a></li>
                                 <li><hr class="dropdown-divider"></li>
                                 <li><a class="dropdown-item" href="#">Machine Learning--Coming soon</a></li>
@@ -58,9 +58,9 @@
                               </a>
                               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li><a class="dropdown-item" href="{{ url_for('slides') }}">Visualization Slides</a></li>
-                                <li><a class="dropdown-item" href="{{ url_for('jm') }}">Job Market</a></li>
-                                <li><a class="dropdown-item" href="{{ url_for('jc') }}">Jobs by Category</a></li>
-                                <li><a class="dropdown-item" href="{{ url_for('jc') }}">Employment Distribution</a></li>
+                                <li><a class="dropdown-item" href="{{ url_for('jc') }}">Job Market</a></li>
+                                <li><a class="dropdown-item" href="{{ url_for('jm') }}">Jobs by Category</a></li>
+                                <li><a class="dropdown-item" href="{{ url_for('ei') }}">Employment Distribution</a></li>
                                 <li><hr class="dropdown-divider"></li>
                                 <li><a class="dropdown-item" href="#">Machine Learning--coming soon</a></li>
                               </ul>
@@ -161,6 +161,14 @@
                         
                     </div>
                 </div>
+                <div class="row g-0">
+                    <div class="col-lg-6 text-white showcase-img" ><img src={{listings.Image}} style="width: 100%"></div>
+                    <div class="col-lg-6 my-auto showcase-text">
+                        <h2>Latest News on US Employment</h2>
+                        <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Get Recent News on Jobs!</a></p>
+                        <h1><a href={{listings.Url}}>{{listings.Title}}</a></h1>
+                    </div>
+                </div>
             </div>
         </section>
         <!-- Testimonials-->
@@ -174,10 +182,6 @@
             <div class="container position-relative">
                 <div class="row justify-content-center">
                     <div class="col-xl-6">
-                        <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Get Recent News on Jobs!</a></p>
-                        <h1>{{listings.Title}}</h1>
-                        <img src={{listings.Image}}  style="width: 500px">
-
                     </div>
                 </div>
             </div>

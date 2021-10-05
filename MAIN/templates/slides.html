@@ -33,8 +33,8 @@
                               </a>
                               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li><a class="dropdown-item" href="{{ url_for('slides') }}">Job Opening Data Visualization</a></li>
-                                <li><a class="dropdown-item" href="{{ url_for('jm') }}">Job Market</a></li>
-                                <li><a class="dropdown-item" href="{{ url_for('jc') }}">Jobs by Category</a></li>
+                                <li><a class="dropdown-item" href="{{ url_for('jc') }}">Job Market</a></li>
+                                <li><a class="dropdown-item" href="{{ url_for('jm') }}">Jobs by Category</a></li>
                                 <li><a class="dropdown-item" href="{{ url_for('ei') }}">Occupation Choropleth</a></li>
                                 <li><hr class="dropdown-divider"></li>
                                 <li><a class="dropdown-item" href="#">Machine Learning--Coming soon</a></li>
@@ -62,9 +62,9 @@
                               </a>
                               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li><a class="dropdown-item" href="{{ url_for('slides') }}">Graph</a></li>
-                                <li><a class="dropdown-item" href="{{ url_for('jm') }}">Job Market</a></li>
-                                <li><a class="dropdown-item" href="{{ url_for('jc') }}">Jobs by Category</a></li>
-                                <li><a class="dropdown-item" href="{{ url_for('jc') }}">Occupation Choropleth</a></li>
+                                <li><a class="dropdown-item" href="{{ url_for('jc') }}">Job Market</a></li>
+                                <li><a class="dropdown-item" href="{{ url_for('jm') }}">Jobs by Category</a></li>
+                                <li><a class="dropdown-item" href="{{ url_for('ei') }}">Occupation Choropleth</a></li>
                                 <li><hr class="dropdown-divider"></li>
                                 <li><a class="dropdown-item" href="#">Machine Learning--coming soon</a></li>
                               </ul>
@@ -90,31 +90,30 @@
         
                 <div class='slide'>
                     
-                    <h1 class='Mont'>Recent Most Popular Job Analysis</h1>
-                    <div class="chartDiv center" ><div id="plot1">
+                    <h1 class='Mont1'>Recent Most Popular Job Analysis</h1>
+                    <div class="chartDiv1 center" ><div id="plot1">
                         <script src="static/js/plot_skill.js"></script>
                         </div></div>
-                    <div class="chartDiv bottomDiv center"></div>
-                    
-                    <a href="/"><button class="btn" ></button><i class="fa fa-home"></i></button></a>
+                    <div class="bottomDiv1 center"><p>This visualization made through a dataset contains 10K+ job data that was in 2021. This graph shows the 30  most in-demand skills based on the number of the time they appeared in the skills field of each job opening. This graph can help job seekers to recognize the skills they should look to develop and remain a competitive job candidate.</p></div>
                     
                 
                 </div>
                 <div class='slide'>
-                    <div class="chartDiv center" ><div id="plot2">
+                    <h1 class='Mont1'>Recent Most Popular Job Analysis</h1>
+                    <div class="chartDiv1 center" ><div id="plot2">
                         <script src="/static/js/plot_per_city.js"></script>
                     </div></div>
-                    <div class="chartDiv bottomDiv center"></div>
+                    <div class="bottomDiv1 center"><p>The graph shows the top 20 cities with the highest number of job openings for job seekers in 2021.</p></div>
                     
         
                         
                 </div>
                 <div class='slide'>
-                    
-                    <div class="chartDiv center" ><div id="plot3">
+                    <h1 class='Mont1'>Recent Most Popular Job Analysis</h1>
+                    <div class="chartDiv1 center" ><div id="plot3">
                         <script src="/static/js/plot_education.js"></script>
                     </div></div>
-                    <div class="chartDiv bottomDiv center"></div>
+                    <div class=" bottomDiv1 center">The chart shows the proportion of jobs nationwide in May 2021 that were in occupations at each of the education levels. About 80 percent of jobs fall into three categories: high school diploma, less education than a high school diploma, and bachelor’s degree.</div>
                         
                 </div>
             </div>

@@ -1,3 +1,10 @@
+.Mont1{
+  margin-top:-200px;
+  font-family: 'Montserrat';
+  text-align: center;
+  vertical-align: top;
+  color: white;
+}
 .Mont{
   font-family: 'Montserrat';
   text-align: center;
@@ -13,7 +20,7 @@
   background-size: cover; 
 }
 .s3{
-  background-color: #A7F432;
+  background-color: #BCD9DA;
   background-size: cover; 
 }
 
@@ -42,6 +49,7 @@ span{
           background-color: #fff;
           width: 800px;
           height: 490px;
+          bottom:15px
 
       }
 .bottomDiv
@@ -49,9 +57,23 @@ span{
          background-color: #fff;
          width: 400px;
          height: 80px;
-         top:30px
+         top:10px
       }
 .center {
         margin: auto;
         width: 50%;
+}
+.chartDiv1{
+
+  background-color: #fff;
+  width: 800px;
+  height: 220px;
+  margin-bottom:300px;
+
+}
+.bottomDiv1{
+  background-color: #fff;
+         width: 800px;
+         height: 100px;
+          margin-top:-50px;
 }
