@@ -29,7 +29,7 @@ html {
 
 .panel-body {
   background-color: #EFEFED;
-  padding-bottom: 50px;
+  padding-bottom: 51px;
 }
 
 mark.green {
@@ -55,10 +55,12 @@ mark.red {
 .pos-f-t{
   display: none;
 }
+
 .navbar {
   margin-bottom: 0px !important;
 }
-/* @media (max-width: 1200px) {
+
+@media (max-width: 1200px) {
   .navbar-expand-lg{
       visibility: hidden;
       display:none;
@@ -67,4 +69,4 @@ mark.red {
     visibility:visible;
     margin-top: -41px;
   }
-} */
+}
