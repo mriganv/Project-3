@@ -1,5 +1,5 @@
 .Mont1{
-  margin-top:-200px;
+  margin-top:-6%;
   font-family: 'Montserrat';
   text-align: center;
   vertical-align: top;
@@ -47,9 +47,9 @@ span{
 .chartDiv{
           position:relative;
           background-color: #fff;
-          width: 800px;
-          height: 490px;
-          bottom:15px
+          width: 80%;
+          height: 30%;
+          bottom:10%;
 
       }
 .bottomDiv
