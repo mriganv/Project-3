@@ -53,7 +53,8 @@ mark.red {
 
 /* NavBar */
 .pos-f-t{
-  display: none;
+  /* display: none; */
+  visibility:hidden;
 }
 
 .navbar {
