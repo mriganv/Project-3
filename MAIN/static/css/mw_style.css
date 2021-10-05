@@ -53,24 +53,23 @@ mark.red {
 
 .pos-f-t{
   display: none;
-  /* visibility:hidden; */
 }
 
 .navbar {
   margin-bottom: 0px !important;
 }
 
-#navbarDropdown {
-  z-index: 7 !important;
+.dropdown-menu {
+  z-index: 9999 !important;
 }
 
-/* @media (max-width: 1200px) {
+@media (max-width: 1200px) {
   .navbar-expand-lg{
       visibility: hidden;
       display:none;
   }
   .pos-f-t{
     visibility:visible;
-    margin-top: -41px;
+    /* margin-top: -41px; */
   }
-} */
+}
