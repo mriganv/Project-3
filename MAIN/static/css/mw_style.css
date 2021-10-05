@@ -11,7 +11,7 @@ html {
 }
 
 .row {
-  padding: 6px;
+  padding: 6px !important;
 }
 
 .well {
@@ -51,17 +51,20 @@ mark.red {
   height: 825px;
 }
 
-/* NavBar */
 .pos-f-t{
-  /* display: none; */
-  visibility:hidden;
+  display: none;
+  /* visibility:hidden; */
 }
 
 .navbar {
   margin-bottom: 0px !important;
 }
 
-@media (max-width: 1200px) {
+#navbarDropdown {
+  z-index: 7 !important;
+}
+
+/* @media (max-width: 1200px) {
   .navbar-expand-lg{
       visibility: hidden;
       display:none;
@@ -70,4 +73,4 @@ mark.red {
     visibility:visible;
     margin-top: -41px;
   }
-}
+} */
