@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/f36ac075-9339-400b-87a1-816cb95072d9/resourceGroups/Project_3_flask/providers/Microsoft.Web/sites/JobAnalysis",
+    "appService.deploySubpath": "."
+}
