@@ -46,7 +46,7 @@ d3.json('../static/resources/indeed_jobs.json').then(function(response) {
     
     // Create an overlay object
     var overlayMaps = {
-      "Private Sector": markers,
+      "Public & Private Sectors": markers,
       "Government": markers2
     };
 
