@@ -18,6 +18,16 @@ function init() {
         type: 'bar',
         orientation: 'h',
         marker: {color: 'rgb(55, 83, 109)'},
+        transforms: [{
+          type: 'sort',
+          target: 'x',
+          order: 'ascending'
+        }, {
+          type: 'filter',
+          target: 'x',
+          operation: '>',
+          value: 1
+        }]
     };
 
     let data = [trace1]
