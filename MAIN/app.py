@@ -26,6 +26,10 @@ def jm():
 def jc():
     return render_template("mw_map.html")
 
+@app.route("/salary")
+def sa():
+    return render_template("as_charts.html")
+
 @app.route("/employment_info")
 def ei():
     return render_template("as_map.html")
