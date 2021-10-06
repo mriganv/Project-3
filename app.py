@@ -20,11 +20,13 @@ def slides():
 
 @app.route("/job_market")
 def jm():
-    return render_template("job_market_map_mw.html")
+    return render_template("jobs_by_category_mw.html")
+    
 
 @app.route("/job_cat")
 def jc():
-    return render_template("jobs_by_category_mw.html")
+    return render_template("job_market_map_mw.html")
+    
 
 @app.route("/salary")
 def sa():
