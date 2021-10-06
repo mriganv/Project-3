@@ -4,7 +4,7 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
-        <title>US Job Market Analysis Analysis</title>
+        <title>US Job Market Analysis</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="{{ url_for('static',filename='assets/favicon.ico') }}" />
         <!-- Bootstrap icons-->
@@ -31,6 +31,7 @@
                                 <li><a class="dropdown-item" href="{{ url_for('slides') }}">Visualization Slides</a></li>
                                 <li><a class="dropdown-item" href="{{ url_for('jc') }}">Job Market</a></li>
                                 <li><a class="dropdown-item" href="{{ url_for('jm') }}">Jobs by Category</a></li>
+                                <li><a class="dropdown-item" href="{{ url_for('sa') }}">Salary by Job</a></li>
                                 <li><a class="dropdown-item" href="{{ url_for('ei') }}">Employment Distribution</a></li>
                                 <li><hr class="dropdown-divider"></li>
                                 <li><a class="dropdown-item" href="#">Machine Learning--Coming soon</a></li>
@@ -60,6 +61,7 @@
                                 <li><a class="dropdown-item" href="{{ url_for('slides') }}">Visualization Slides</a></li>
                                 <li><a class="dropdown-item" href="{{ url_for('jc') }}">Job Market</a></li>
                                 <li><a class="dropdown-item" href="{{ url_for('jm') }}">Jobs by Category</a></li>
+                                <li><a class="dropdown-item" href="{{ url_for('sa') }}">Salary by Job</a></li>
                                 <li><a class="dropdown-item" href="{{ url_for('ei') }}">Employment Distribution</a></li>
                                 <li><hr class="dropdown-divider"></li>
                                 <li><a class="dropdown-item" href="#">Machine Learning--coming soon</a></li>
@@ -160,7 +162,7 @@
                         
                     </div>
                 </div>
-            </div>
+            
         </section>
         <!-- Testimonials-->
         <section class="testimonials text-center bg-light">

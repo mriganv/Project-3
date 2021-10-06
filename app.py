@@ -4,7 +4,7 @@ from flask import Flask, render_template, redirect
 
 app = Flask(__name__)
 
-# Use flask_pymongo to set up mongo connection
+# # Use flask_pymongo to set up mongo connection
 # app.config["MONGO_URI"] = "mongodb://localhost:27017/job_news"
 # mongo = PyMongo(app)
 # mongo.db.listings.drop()
@@ -25,6 +25,10 @@ def jm():
 @app.route("/job_cat")
 def jc():
     return render_template("mw_map.html")
+
+@app.route("/salary")
+def sa():
+    return render_template("as_charts.html")
 
 @app.route("/employment_info")
 def ei():
