@@ -3,7 +3,7 @@ d3.json('../static/resources/indeed_jobs.json').then(function(response) {
   var markers = L.markerClusterGroup();
   var keys = Object.keys(response);
 
-  // Define marker icon
+  // Define custom marker icon
   var myIcon = L.icon({
     iconUrl: '../static/images/pin_map.png',
     iconSize: [38, 38],
@@ -61,7 +61,5 @@ d3.json('../static/resources/indeed_jobs.json').then(function(response) {
     L.control.layers(baseMaps, overlayMaps, {
       collapsed: false
     }).addTo(myMap);
-
   });
-
 });

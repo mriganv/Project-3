@@ -97,7 +97,6 @@ function init(){
 
         var targetDiv = document.getElementById('sample-metadata');
         targetDiv.innerHTML = "<mark class='green'><b>PROS:</b></mark><ul><li><b>Flexibility:</b> More opportunities to change jobs in order to find what suits you best.</li><li><b>More Jobs:</b> Due to the number of businesses that make up the public/private sector, there are far more opportunities available.</li><li><b>Better Progression:</b> Easier to receive a pay rise and progress within a company.</li><li><b>Better Pay:</b> Salaries are more competitive and negotiable than in government.</li></ul><hr style='border:0.5px solid #a9a9a9'><mark class='red'><b>CONS:</b></mark><ul><li><b>Benefits:</b> Benefits depend on the generosity of your employer.</li><li><b>Big Competition:</b> A lot of competition from the time you look for a job and once you’re employed. Must keep in mind two things: 1) constantly thrive for being the best in your field, and 2) be aware of the likelihood of losing your job.</li><li><b>Possible Stressful Environment:</b> You’ll need to have the ability to deal with obstacles quickly and effectively.</li></ul>"
-
     });
 }
 
@@ -213,7 +212,6 @@ function updatePage(){
                     };
                 });
                 category_job_count_list.push(count);
-    
             });
     
             // Create two-dimensional array (Job category name & Number of jobs per category)
