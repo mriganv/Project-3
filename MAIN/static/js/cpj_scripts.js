@@ -73,4 +73,39 @@ var layoutbar = {barmode: 'group', title: "Job Openings for Master's and Doctora
 
 Plotly.newPlot('mastersbar', data, layoutbar);
 
+// **********************************************************************************************
+
+// Choropleth map to show Jobs availabe in each state
+
+// **********************************************************************************************
+
+
+d3.csv('../static/resources/Jobsacrossus.csv', function(err, rows){
+                function unpack(rows, key) {
+                return rows.map(function(row) { return row[key]; });
+}
+var data2 = [{
+    type: 'choropleth',
+    locationmode: 'USA-states',
+    locations: unpack(rows, 'region'),
+    z: unpack(rows, 'education'),
+    autocolorscale: true
+}];
+
+var layout2 = {
+title: 'Jobs available by State',
+    geo:{
+        scope: 'usa',
+        countrycolor: 'rgb(255, 255, 255)',
+        showland: true,
+        landcolor: 'rgb(217, 217, 217)',
+        showlakes: true,
+        lakecolor: 'rgb(255, 255, 255)',
+        subunitcolor: 'rgb(255, 255, 255)',
+        lonaxis: {},
+        lataxis: {}
+    }
+};
+Plotly.newPlot("myDiv", data2, layout2, {showLink: false});
+});
 
