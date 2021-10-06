@@ -76,7 +76,7 @@ geoData = "../static/resources/geojsons/newtest.geojson"
   })
   .addTo(myMap1)
     //   // Set up the legend.
-    var legend = L.control({ position: "bottomright" });
+    var legend = L.control({ position: "topleft" });
     legend.onAdd = function() {
       var div = L.DomUtil.create("div", "info legend");
       var limits = geojson.options.limits;
@@ -84,7 +84,7 @@ geoData = "../static/resources/geojsons/newtest.geojson"
       var labels = [];
 
  //     // Add the minimum and maximum.
-      var legendInfo = "<h3>Occupation Density</h3>" +
+      var legendInfo = "<h5>Occupation Density</h5>" +
         "<div class=\"labels\">" +
           "<div class=\"min\">" + limits[0] + "</div>" +
           "<div class=\"max\">" + limits[limits.length - 1] + "</div>" +
@@ -165,7 +165,7 @@ geoData = "../static/resources/geojsons/newtest.geojson"
 
 
   //   // Set up the legend.
-  var legend = L.control({ position: "bottomright" });
+  var legend = L.control({ position: 'topleft' });
      legend.onAdd = function() {
        var div = L.DomUtil.create("div", "info legend");
        var limits = geojson.options.limits;
@@ -173,7 +173,7 @@ geoData = "../static/resources/geojsons/newtest.geojson"
        var labels = [];
 
   //     // Add the minimum and maximum.
-       var legendInfo = "<h3>Occupation Density</h3>" +
+       var legendInfo = "<h5>Occupation Density</h5 >" +
          "<div class=\"labels\">" +
            "<div class=\"min\">" + limits[0] + "</div>" +
            "<div class=\"max\">" + limits[limits.length - 1] + "</div>" +
@@ -196,19 +196,6 @@ geoData = "../static/resources/geojsons/newtest.geojson"
  }
   });
  
-
-
-  // var baseMaps = {
-  //     "Streets": streets
-  // };
-
-  // // var overlayMaps = {
-  // //     "Test": geojson
-  // // };
-
-  // L.control.layers(baseMaps
-  //     // , overlayMaps
-  //   ).addTo(myMap);
 
 
 
