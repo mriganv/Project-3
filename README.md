@@ -2,9 +2,8 @@
 
 ## Project Description
 * Analysis on recent US job market
-   * Webscraping: 
 * Comparison analysis on college major vs opening job titles
-   * Bar: 
+   * Bar: animated and distributed by degree and job openings via Plotly
 * Comparison analysis on government jobs (~10,000 records) vs private/public sector jobs (~30,000 records)
    * Map: clustered markers & customized markers via Leaflet
    * Bar: animated and distributed by job categories and US departments via [CanvasJS](https://canvasjs.com/javascript-charts/animated-chart/)
