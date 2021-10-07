@@ -1,12 +1,12 @@
 from flask import Flask, render_template, redirect
 # from flask_pymongo import PyMongo
 # import scrape
-from pymongo import MongoClient
+# from pymongo import MongoClient
 
 app = Flask(__name__)
-client=MongoClient("mongodb+srv://shan_jiang:jiangshan9678@cluster0.tutpa.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
-db=client.get_database("project3_DB")
-list1=db.job_web
+# client=MongoClient("mongodb+srv://shan_jiang:jiangshan9678@cluster0.tutpa.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
+# db=client.get_database("project3_DB")
+# list1=db.job_web
 
 # # Use flask_pymongo to set up mongo connection
 # app.config["MONGO_URI"] = "mongodb://localhost:27017/job_news"
@@ -15,7 +15,10 @@ list1=db.job_web
 
 @app.route("/")
 def index():
-    listings = list1.find_one()
+    listings = {'_id':'615f3911a6d569a7cd86c945',
+ 'url': 'https://www.cnbc.com/2021/10/04/here-are-the-five-most-valuable-college-majors-.html',
+ 'img': 'https://image.cnbcfm.com/api/v1/image/106885838-1621509859148-gettyimages-1318999756-vcg111330726320.jpeg?v=1633354738&w=929&h=523',
+ 'title': 'Here are the 5 most valuable — and 5 least valuable — college majors'}
     return render_template("index.html",listings=listings)
 
 @app.route("/slides")
