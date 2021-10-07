@@ -1,8 +1,12 @@
 from flask import Flask, render_template, redirect
 # from flask_pymongo import PyMongo
 # import scrape
+from pymongo import MongoClient
 
 app = Flask(__name__)
+client=MongoClient("mongodb+srv://shan_jiang:jiangshan9678@cluster0.tutpa.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
+db=client.get_database("project3_DB")
+list1=db.job_web
 
 # # Use flask_pymongo to set up mongo connection
 # app.config["MONGO_URI"] = "mongodb://localhost:27017/job_news"
@@ -11,8 +15,8 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    # listings = mongo.db.listings.find_one()
-    return render_template("index.html")
+    listings = list1.find_one()
+    return render_template("index.html",listings=listings)
 
 @app.route("/slides")
 def slides():
