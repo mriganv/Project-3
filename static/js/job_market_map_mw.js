@@ -1,5 +1,5 @@
 // Get indeed data with d3
-d3.json('../static/resources/indeed_jobs.json').then(function(response) {
+d3.json('../static/resources/indeed_jobs_w.json').then(function(response) {
     var markers = L.markerClusterGroup();
     var keys = Object.keys(response);
   
