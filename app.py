@@ -25,12 +25,12 @@ def index():
 def slides():
     return render_template("slides.html")
 
-@app.route("/job_market")
+@app.route("/job_cat")
 def jm():
     return render_template("jobs_by_category_mw.html")
     
 
-@app.route("/job_cat")
+@app.route("/job_market")
 def jc():
     return render_template("job_market_map_visual_mw.html")
     
