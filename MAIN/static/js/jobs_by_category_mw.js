@@ -41,7 +41,7 @@ function plotCanvas(data_canvas, main_title, y_title){
 
 function init(){
     // Indeed Jobs
-    d3.json('../static/resources/indeed_jobs.json').then(function(response) {
+    d3.json('../static/resources/indeed_jobs_w.json').then(function(response) {
         var keys = Object.keys(response);
 
         var category_list = []
@@ -179,7 +179,7 @@ function updatePage(){
         }); 
     }
     else if (dataset == "Private Sector"){
-        d3.json('../static/resources/indeed_jobs.json').then(function(response) {
+        d3.json('../static/resources/indeed_jobs_w.json').then(function(response) {
             var keys = Object.keys(response);
     
             var category_list = []
