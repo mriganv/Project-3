@@ -1,17 +1,12 @@
 from flask import Flask, render_template, redirect
-# from flask_pymongo import PyMongo
-# import scrape
-# from pymongo import MongoClient
-
+import pyodbc
+server = 'jobtesting.database.windows.net' 
+database = 'JobMarketData' 
+username = 'jiangshan9678' 
+password = 'Frank1208!' 
+cnxn = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server};SERVER='+server+';DATABASE='+database+';UID='+username+';PWD='+ password)
+cursor = cnxn.cursor()
 app = Flask(__name__)
-# client=MongoClient("mongodb+srv://shan_jiang:jiangshan9678@cluster0.tutpa.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
-# db=client.get_database("project3_DB")
-# list1=db.job_web
-
-# # Use flask_pymongo to set up mongo connection
-# app.config["MONGO_URI"] = "mongodb://localhost:27017/job_news"
-# mongo = PyMongo(app)
-# mongo.db.listings.drop()
 
 @app.route("/")
 def index():
