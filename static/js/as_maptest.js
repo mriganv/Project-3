@@ -1,5 +1,5 @@
 
-geoData = "../static/resources/geojsons/newtest.geojson"
+geoData = "../static/resources/geojsons/newnewtest.geojson"
    
     
   let geojson;
@@ -40,13 +40,13 @@ geoData = "../static/resources/geojsons/newtest.geojson"
       .addTo(myMap1);
     
     
-      geoData = "../static/resources/geojsons/newtest.geojson"
+      geoData = "../static/resources/geojsons/newnewtest.geojson"
 
     // Create a new choropleth layer.
     geojson = L.choropleth(data, {
 
     // Define which property in the features to use.
-    valueProperty: "Accountants and auditors",
+    valueProperty: "Computer and information systems managers",
 
     // Set the color scale.
     scale: ["#5ba3ff", "#301934"],
@@ -65,11 +65,11 @@ geoData = "../static/resources/geojsons/newtest.geojson"
 
     // Binding a popup to each layer
     onEachFeature: function(feature, layer) {
-      if( feature.properties["Accountants and auditors"]!== undefined){
+      if( feature.properties["Computer and information systems managers"]!== undefined){
           layer.bindPopup(feature.properties.name + "<br><hr>Number of Jobs: " +
-          feature.properties["Accountants and auditors"]);
+          feature.properties["Computer and information systems managers"]);
       }else{
-        console.log(feature.properties["Accountants and auditors"])
+        console.log(feature.properties["Computer and information systems managers"])
         layer.bindPopup(feature.properties.name + "<br><hr>Number of Jobs: 0");
       }
     }
