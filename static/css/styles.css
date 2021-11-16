@@ -87,7 +87,14 @@ body {
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
-
+footer {
+  position: fixed;
+  height: 50px;
+  margin-top: 1em;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
 hr {
   margin: 1rem 0;
   color: inherit;

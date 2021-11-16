@@ -4,11 +4,10 @@ body {
   background-color: #B5BDC7;  
 }
 
-#map,
-body,
-html {
-  height:100%;
-  overflow-y:hidden;
+#map {
+  height: 80%;
+  width: calc(100% - 300px - 0.25em);
+  float: left;
 }
 
 
@@ -54,4 +53,21 @@ html {
 .legend .max {
   float: right;
   padding-bottom: 5px;
+}
+
+footer {
+  position: fixed;
+  height: 50px;
+  margin-top: 1em;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+body > div.container {
+  position: fixed;
+  top: calc(50px + 1em);
+  bottom: calc(50px + 1em);
+  right: 0;
+  left: 0;
+  vertical-align: top;
 }
