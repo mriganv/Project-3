@@ -127,7 +127,7 @@ geoData = "../static/resources/geojsons/datachoropleth.geojson"
       let v=dropdown.property('value');
       
       
-        geoData = "../static/resources/geojsons/newtest.geojson"
+        geoData = "../static/resources/geojsons/datachoropleth.geojson"
 
       // Create a new choropleth layer.
       geojson = L.choropleth(data, {
