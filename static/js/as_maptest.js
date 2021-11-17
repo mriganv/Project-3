@@ -1,5 +1,5 @@
 
-geoData = "../static/resources/geojsons/newnewtest.geojson"
+geoData = "../static/resources/geojsons/datachoropleth.geojson"
    
     
   let geojson;
@@ -18,7 +18,7 @@ geoData = "../static/resources/geojsons/newnewtest.geojson"
         })
         .addTo(myMap);
     const bigboi = data.features
-    keys=Object.keys(bigboi[0].properties.jobs['Job characteristic code'])
+    keys=Object.keys(bigboi[0].properties.jobs['Code'])
     dropdown=d3.select("#selDataset");
 
     for (i=0;i<keys.length;i++) {
@@ -27,7 +27,7 @@ geoData = "../static/resources/geojsons/newnewtest.geojson"
   }
   function init(){
     map.remove();
-    div=d3.select('#map')
+    div=d3.select('body').append("div").attr("id","map")
     let myMap1 = L.map("map", {
       center: [37.8, -96],
       zoom: 5 ,
@@ -40,13 +40,13 @@ geoData = "../static/resources/geojsons/newnewtest.geojson"
       .addTo(myMap1);
     
     
-      geoData = "../static/resources/geojsons/newnewtest.geojson"
+      geoData = "../static/resources/geojsons/datachoropleth.geojson"
 
     // Create a new choropleth layer.
     geojson = L.choropleth(data, {
 
     // Define which property in the features to use.
-    valueProperty: "Computer and information systems managers",
+    valueProperty: "Business Intelligence Developer",
 
     // Set the color scale.
     scale: ["#5ba3ff", "#301934"],
@@ -65,11 +65,11 @@ geoData = "../static/resources/geojsons/newnewtest.geojson"
 
     // Binding a popup to each layer
     onEachFeature: function(feature, layer) {
-      if( feature.properties["Computer and information systems managers"]!== undefined){
+      if( feature.properties["Business Intelligence Developer"]!== undefined){
           layer.bindPopup(feature.properties.name + "<br><hr>Number of Jobs: " +
-          feature.properties["Computer and information systems managers"]);
+          feature.properties["Business Intelligence Developer"]);
       }else{
-        console.log(feature.properties["Computer and information systems managers"])
+        console.log(feature.properties["Business Intelligence Developer"])
         layer.bindPopup(feature.properties.name + "<br><hr>Number of Jobs: 0");
       }
     }
@@ -112,7 +112,7 @@ geoData = "../static/resources/geojsons/newnewtest.geojson"
 
     function getData(){
       map.remove();
-      div=d3.select('#map')
+      div=d3.select('body').append("div").attr("id","map")
       dropdown=d3.select("#selDataset"); 
       let myMap1 = L.map("map", {
         center: [37.8, -96],
