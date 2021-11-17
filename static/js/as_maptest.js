@@ -27,7 +27,7 @@ geoData = "../static/resources/geojsons/newnewtest.geojson"
   }
   function init(){
     map.remove();
-    div=d3.select('body').append("div").attr("id","map")
+    div=d3.select('#map')
     let myMap1 = L.map("map", {
       center: [37.8, -96],
       zoom: 5 ,
@@ -112,7 +112,7 @@ geoData = "../static/resources/geojsons/newnewtest.geojson"
 
     function getData(){
       map.remove();
-      div=d3.select('body').append("div").attr("id","map")
+      div=d3.select('#map')
       dropdown=d3.select("#selDataset"); 
       let myMap1 = L.map("map", {
         center: [37.8, -96],
