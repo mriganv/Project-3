@@ -1,11 +1,15 @@
 from flask import Flask, render_template, redirect
-# import pyodbc
-# server = 'jobtesting.database.windows.net' 
-# database = 'JobMarketData' 
-# username = 'jiangshan9678' 
-# password = 'Frank1208!' 
-# cnxn = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server};SERVER='+server+';DATABASE='+database+';UID='+username+';PWD='+ password)
-# cursor = cnxn.cursor()
+from flask import request
+import pandas as pd
+import pickle
+
+
+# Use pickle to load in the pre-trained model.
+with open(f'static/model/salary_predict_model.pkl', 'rb') as f:
+
+    model = pickle.load(f)
+
+
 app = Flask(__name__)
 
 @app.route("/")
@@ -38,6 +42,25 @@ def sa():
 def ei():
     return render_template("as_map.html")
 
+@app.route('/salary_prediction',methods=['GET', 'POST'])
+def sp():
+    if request.method == 'GET':
+        return render_template('salary_prediction_sj.html')
+    if request.method == 'POST':
+        temperature = request.form['temperature']
+        humidity = request.form['humidity']
+        windspeed = request.form['windspeed']
+        input_variables = pd.DataFrame([[temperature, humidity, windspeed]],
+                                       columns=['temperature', 'humidity', 'windspeed'],
+                                       dtype=float)
+        prediction = model.predict(input_variables)[0]
+        return render_template('salary_prediction_sj.html',
+                                     original_input={'Temperature':temperature,
+                                                     'Humidity':humidity,
+                                                     'Windspeed':windspeed},
+                                     result=prediction,
+                                     )
+    
 
 # @app.route("/scrape")
 # def scraper():
