@@ -41,7 +41,7 @@ geoData = "../static/resources/geojsons/datachoropleth.geojson"
     
     
       geoData = "../static/resources/geojsons/datachoropleth.geojson"
-
+  
     // Create a new choropleth layer.
     geojson = L.choropleth(data, {
 
@@ -107,6 +107,7 @@ geoData = "../static/resources/geojsons/datachoropleth.geojson"
     }
 
     init();
+
     d3.selectAll("#selDataset").on("change", getData);
 
 
@@ -125,7 +126,6 @@ geoData = "../static/resources/geojsons/datachoropleth.geojson"
         })
         .addTo(myMap1);
       let v=dropdown.property('value');
-      
       
         geoData = "../static/resources/geojsons/datachoropleth.geojson"
 
