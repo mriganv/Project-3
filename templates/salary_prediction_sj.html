@@ -5,12 +5,6 @@
         margin: auto;
         width: 35%;
     }
-    .result {
-        margin: auto;
-        width: 35%;
-        border: 1px solid #ccc;
-    }
-    
     </style>
 <head>
 
@@ -107,14 +101,26 @@
             <select name="state" id="selDataset2"></select>
           </div>
           <div class="well">
-            <h5>Job Industry</h5>
-            <select name="industry" id="selDataset3"></select>
+            <h5>Job Sector</h5>
+            <select name="sector" id="selDataset3"></select>
             </div>
+            <div class="well">
+              <h5>Job Industry</h5>
+              <select name="industry" id="selDataset4"></select>
+              </div>
+          <div class="well">
+            <h5>Company Ownership</h5>
+            <select name="ownership" id="selDataset5"></select>
+            </div>
+            <div class="well">
+              <h5>Job Seniority</h5>
+              <select name="seniority" id="selDataset6"></select>
+              </div>
           Company Size:
-          <input name="size" id="selDataset4" type="number" required>
+          <input name="size"  type="number" required>
           <br>
           <br> Company Age:
-          <input name="age"  id="selDataset5" type="number" required>
+          <input name="age"   type="number" required>
           <br>
           <br>
 
@@ -174,12 +180,14 @@
 
           <div class="checkbox-block">
             <!--checkbox 1-->
+            <input class="checkbox-effect checkbox-effect-1" id="Scikit_Learn" type="checkbox" value="Keras" name="Keras"/>
+            <label for="Keras">Keras</label>
           
           <!--checkbox 2-->
-          <input class="checkbox-effect checkbox-effect-1" id="Scikit_Learn" type="checkbox" value="Scikit_Learn" name="Scikit_Learn"/>
+          <input class="checkbox-effect checkbox-effect-1" id="Scikit_Learn" type="checkbox" value="Scikit-Learn" name="Scikit_Learn"/>
           <label for="Scikit_Learn">Scikit Learn</label>
 
-          <input class="checkbox-effect checkbox-effect-1" id="ml" type="checkbox" value="ml" name="ml"/>
+          <input class="checkbox-effect checkbox-effect-1" id="ml" type="checkbox" value="Machine_Learning" name="ml"/>
           <label for="ml">Machine Learning</label>
           </div>
 
@@ -192,23 +200,14 @@
           <input class="checkbox-effect checkbox-effect-1" id="Scala" type="checkbox" value="Scala" name="Scala"/>
           <label for="Scala">Scala</label>
 
-          <input class="checkbox-effect checkbox-effect-1" id="DataBrick" type="checkbox" value="DataBrick" name="DataBrick"/>
+          <input class="checkbox-effect checkbox-effect-1" id="DataBrick" type="checkbox" value="Data_Brick" name="DataBrick"/>
           <label for="DataBrick">DataBrick</label>
           </div>
           <input id="submit" type="submit">
       </fieldset>
   </form>
-
-  <br>
   <div class="result" align="center">
-      {% if result %}}
-          {% for variable, value in original_input.items() %}
-              <b>{{ variable }}</b> : {{ value }}
-          {% endfor %}
-          <br>
-          <br> Predicted Salary:
-             <p style="font-size:50px">{{ result }}</p>
-      {% endif %}
+    {{pred}}
   </div>
 
   <script src="https://d3js.org/d3.v5.min.js"></script>
@@ -219,24 +218,4 @@
   <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
   
 </body>
-<footer class="footer bg-light">
-  <div class="container">
-      <div class="row">
-          <div class="col-lg-6 h-100 text-center text-lg-start my-auto">
-              <ul class="list-inline mb-2">
-                  <li class="list-inline-item"><a href="https://github.com/mriganv/Project-3/blob/main/README.md">About</a></li>
-              </ul>
-              <p class="text-muted small mb-4 mb-lg-0">&copy; UCI-DATA-BOOTCAMP PROJECT 3.</p>
-          </div>
-          <div class="col-lg-6 h-100 text-center text-lg-end my-auto">
-              <ul class="list-inline mb-0">
-                  <li class="list-inline-item me-4">
-                      <a href="https://github.com/mriganv/Project-3"><i class="bi-github fs-3"></i></a>
-                  </li>
-              </ul>
-          </div>
-      </div>
-  </div>
-
-</footer>
 </html>
