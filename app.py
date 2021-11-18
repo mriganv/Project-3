@@ -1,8 +1,49 @@
 from flask import Flask, render_template, redirect
 from flask import request
+import time
 import pandas as pd
+import numpy as np
+import re
+from nltk.corpus import stopwords
+import matplotlib.pyplot as plt
+from sklearn.base import BaseEstimator, TransformerMixin
+from sklearn.model_selection import train_test_split
+from sklearn.pipeline import Pipeline
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.preprocessing import StandardScaler
+from sklearn.pipeline import FeatureUnion
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import confusion_matrix
 import pickle
 
+class TextSelector(BaseEstimator, TransformerMixin):
+    """
+    Transformer to select a single column from the data frame to perform additional transformations on
+    Use on text columns in the data
+    """
+    def __init__(self, key):
+        self.key = key
+
+    def fit(self, X, y=None):
+        return self
+
+    def transform(self, X):
+        return X[self.key]
+    
+class NumberSelector(BaseEstimator, TransformerMixin):
+    """
+    Transformer to select a single column from the data frame to perform additional transformations on
+    Use on numeric columns in the data
+    """
+    def __init__(self, key):
+        self.key = key
+
+    def fit(self, X, y=None):
+        return self
+
+    def transform(self, X):
+        return X[[self.key]]
 
 # Use pickle to load in the pre-trained model.
 with open(f'static/model/salary_predict_model.pkl', 'rb') as f:
@@ -44,23 +85,7 @@ def ei():
 
 @app.route('/salary_prediction',methods=['GET', 'POST'])
 def sp():
-    if request.method == 'GET':
         return render_template('salary_prediction_sj.html')
-    if request.method == 'POST':
-        temperature = request.form['temperature']
-        humidity = request.form['humidity']
-        windspeed = request.form['windspeed']
-        input_variables = pd.DataFrame([[temperature, humidity, windspeed]],
-                                       columns=['temperature', 'humidity', 'windspeed'],
-                                       dtype=float)
-        prediction = model.predict(input_variables)[0]
-        return render_template('salary_prediction_sj.html',
-                                     original_input={'Temperature':temperature,
-                                                     'Humidity':humidity,
-                                                     'Windspeed':windspeed},
-                                     result=prediction,
-                                     )
-    
 
 # @app.route("/scrape")
 # def scraper():
