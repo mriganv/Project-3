@@ -17,6 +17,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import confusion_matrix
 import pickle
 
+
 class TextSelector(BaseEstimator, TransformerMixin):
     """
     Transformer to select a single column from the data frame to perform additional transformations on
@@ -45,8 +46,36 @@ class NumberSelector(BaseEstimator, TransformerMixin):
     def transform(self, X):
         return X[[self.key]]
 
+def salary_category(bin):
+
+    if bin==1:
+        return "Job salary should be between $50000 and $75000"
+    if bin==2:
+        return "Job salary should be between $75000 and $100000"
+    if bin==3:
+        return "Job salary should be between $100000 and $125000"
+    if bin==4:
+        return "Job salary should be between $125000 and $150000"
+    if bin==5:
+        return "Job salary should be between $150000 and $175000"
+    if bin==6:
+        return "Job salary should be between $175000 and $200000"
+    if bin==7:
+        return "Job salary should be more than $200000"
+
+def skill_check(dict):
+    v=dict.values()
+    skill_dict={
+    'Python':0, 'R':0, 'SQL':0, 'AWS':0, 'Excel':0, 'GCP':0, 'Azure':0, 'Spark':0,
+       'PyTorch':0, 'TensorFlow':0, 'Tableau':0, 'Keras':0, 'NoSQL':0, 'Scikit-Learn':0,
+       'Machine_Learning':0, 'Hadoop':0, 'Scala':0, 'Data_Brick':0
+    }
+    for i in v:
+        if (i in skill_dict.keys()):
+            skill_dict[i]=1
+    return skill_dict
 # Use pickle to load in the pre-trained model.
-with open(f'static/model/salary_predict_model.pkl', 'rb') as f:
+with open(f'salary_predict_model.pkl', 'rb') as f:
 
     model = pickle.load(f)
 
@@ -85,15 +114,21 @@ def ei():
 
 @app.route('/salary_prediction',methods=['GET', 'POST'])
 def sp():
+    if request.method == 'POST':
+        names = request.form.to_dict()
+        skill=skill_check(names)
+        input=[names["titles"],names["size"],names["ownership"],names["industry"],names["sector"],names["state"],names["age"]]
+        input=input+list(skill.values())
+        input=input+[names["titles"],names["seniority"]]
+        df=pd.DataFrame([input],columns=['Job Title', 'Size', 'Type of ownership', 'Industry', 'Sector', 'State',
+       'Age', 'Python', 'R', 'SQL', 'AWS', 'Excel', 'GCP', 'Azure', 'Spark',
+       'PyTorch', 'TensorFlow', 'Tableau', 'Keras', 'NoSQL', 'Scikit-Learn',
+       'Machine_Learning', 'Hadoop', 'Scala', 'Data_Brick', 'Job',
+       'Seniority'])
+        pred=salary_category( model.predict(df)[0])
+        return render_template('salary_prediction_sj.html',pred=pred)
+    else:
         return render_template('salary_prediction_sj.html')
-
-# @app.route("/scrape")
-# def scraper():
-#     mongo.db.listings.drop()
-#     listings = mongo.db.listings
-#     listings_data = scrape.scrape()
-#     listings.update({}, listings_data, upsert=True)
-#     return redirect("/", code=302)
 
 
 if __name__ == "__main__":
