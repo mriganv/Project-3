@@ -2,3 +2,8 @@ flask
 boto3
 pandas
 pickle
+nltk
+numpy
+re
+sklearn
+matplotlib
