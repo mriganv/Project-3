@@ -19,18 +19,12 @@ d3.json("../static/resources/Salary_Prediction.json").then(function(data) {
         let op1=dropdown2.append("option").text(loc[i])
         op1.property('value',loc[i])
     }
-    for (i=0;i<sec.length;i++) {
-        let op2=dropdown3.append("option").text(sec[i])
-        op2.property('value',sec[i])
-    }
+
     for (i=0;i<ind.length;i++) {
         let op3=dropdown4.append("option").text(ind[i])
         op3.property('value',ind[i])
     }
-    for (i=0;i<own.length;i++) {
-        let op4=dropdown5.append("option").text(own[i])
-        op4.property('value',own[i])
-    }
+
     for (i=0;i<sen.length;i++) {
         let op5=dropdown6.append("option").text(sen[i])
         op5.property('value',sen[i])

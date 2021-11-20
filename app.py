@@ -14,7 +14,7 @@ from sklearn.pipeline import FeatureUnion
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import confusion_matrix
-import pickle
+import joblib
 
 
 class TextSelector(BaseEstimator, TransformerMixin):
@@ -66,18 +66,16 @@ def skill_check(dict):
     v=dict.values()
     skill_dict={
     'Python':0, 'R':0, 'SQL':0, 'AWS':0, 'Excel':0, 'GCP':0, 'Azure':0, 'Spark':0,
-       'PyTorch':0, 'TensorFlow':0, 'Tableau':0, 'Keras':0, 'NoSQL':0, 'Scikit-Learn':0,
-       'Machine_Learning':0, 'Hadoop':0, 'Scala':0, 'Data_Brick':0
+        'Tableau':0, 'Keras':0, 'NoSQL':0,
+       'Machine_Learning':0, 'Hadoop':0
     }
     for i in v:
         if (i in skill_dict.keys()):
             skill_dict[i]=1
     return skill_dict
+
 # Use pickle to load in the pre-trained model.
-with open(f'salary_predict_model.pkl', 'rb') as f:
-
-    model = pickle.load(f)
-
+model=joblib.load( 'salary_predict_model.pkl')
 
 app = Flask(__name__)
 
@@ -116,13 +114,13 @@ def sp():
     if request.method == 'POST':
         names = request.form.to_dict()
         skill=skill_check(names)
-        input=[names["titles"],names["size"],names["ownership"],names["industry"],names["sector"],names["state"],names["age"]]
+        input=[names["titles"],names["size"],names["industry"],names["state"],names["age"]]
         input=input+list(skill.values())
         input=input+[names["titles"],names["seniority"]]
-        df=pd.DataFrame([input],columns=['Job Title', 'Size', 'Type of ownership', 'Industry', 'Sector', 'State',
-       'Age', 'Python', 'R', 'SQL', 'AWS', 'Excel', 'GCP', 'Azure', 'Spark',
-       'PyTorch', 'TensorFlow', 'Tableau', 'Keras', 'NoSQL', 'Scikit-Learn',
-       'Machine_Learning', 'Hadoop', 'Scala', 'Data_Brick', 'Job',
+        df=pd.DataFrame([input],columns=['Job Title', 'Size',  'Industry',  'State','Age',
+        'Python', 'R', 'SQL', 'AWS', 'Excel', 'GCP', 'Azure', 'Spark',
+       'Tableau', 'Keras', 'NoSQL',
+       'Machine_Learning', 'Hadoop', 'Job',
        'Seniority'])
         pred=salary_category( model.predict(df)[0])
         return render_template('salary_prediction_sj.html',pred=pred)
