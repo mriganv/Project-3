@@ -1,7 +1,9 @@
 // Get indeed data with d3
-d3.json('../static/resources/indeed_jobs_w.json').then(function(response) {
-    var markers = L.markerClusterGroup();
-    var keys = Object.keys(response);
+d3.json('../static/resources/mw_indeed_jobs_geo.json').then(function(response) {
+  console.log('Hello')  
+  var markers = L.markerClusterGroup();
+  var keys = Object.keys(response);
+  console.log('Hello2')
   
     // Define marker icon
     var myIcon = L.icon({
@@ -12,22 +14,23 @@ d3.json('../static/resources/indeed_jobs_w.json').then(function(response) {
       });
   
     for(var i = 0; i < keys.length; i++){
+      console.log(response[keys[i]].latitude)
       if (response[keys[i]].latitude){
-        markers.addLayer(L.marker([response[keys[i]].latitude, response[keys[i]].longitude], {icon: myIcon}).bindPopup(`<h5><b>${response[keys[i]].job_title}</b></h5><hr>${response[keys[i]].company_name}<br>(${response[keys[i]].category})`));
+        markers.addLayer(L.marker([response[keys[i]].latitude, response[keys[i]].longitude], {icon: myIcon}).bindPopup(`<h5><b>${response[keys[i]].job_tile}</b></h5><hr>${response[keys[i]].company_name}`));
       };
     };
+
+    console.log('Hello3')
   
     // Get USAjobs data with d3
-    d3.json('../static/resources/gov_jobs.json').then(function(response) {
+    d3.json('../static/resources/mw_gov_jobs_geo.json').then(function(response) {
   
       var markers2 = L.markerClusterGroup();
   
       var keys2 = Object.keys(response);
   
       for(var i = 0; i < keys2.length; i++){
-        if (response[keys2[i]].LocationLatitude){
-          markers2.addLayer(L.marker([response[keys2[i]].LocationLatitude, response[keys2[i]].LocationLongitude], {icon: myIcon}).bindPopup(`<h5><b>${response[keys2[i]].Title}</b></h5><hr>${response[keys2[i]].Agency}<br>(${response[keys2[i]].Department})`));
-        };
+        markers2.addLayer(L.marker([response[keys2[i]].lat, response[keys2[i]].long], {icon: myIcon}).bindPopup(`<h5><b>${response[keys2[i]].title}</b></h5><hr>${response[keys2[i]].name}`));
       };
   
   
