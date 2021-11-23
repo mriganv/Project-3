@@ -48,18 +48,12 @@ class NumberSelector(BaseEstimator, TransformerMixin):
 def salary_category(bin):
 
     if bin==1:
-        return "Job salary is estimated be between $50000 and $75000"
+        return "Job salary is estimated be between $50000 and $100000"
     if bin==2:
-        return "Job salary is estimated be between $75000 and $100000"
+        return "Job salary is estimated be between $100000 and $150000"
     if bin==3:
-        return "Job salary is estimated be between $100000 and $125000"
+        return "Job salary is estimated be between $150000 and $200000"
     if bin==4:
-        return "Job salary is estimated be between $125000 and $150000"
-    if bin==5:
-        return "Job salary is estimated be between $150000 and $175000"
-    if bin==6:
-        return "Job salary is estimated be between $175000 and $200000"
-    if bin==7:
         return "Job salary is estimated be more than $200000"
 
 def skill_check(dict):
