@@ -27,10 +27,10 @@
                         <li><a class="dropdown-item" href="{{ url_for('slides') }}">Visualization Slides</a></li>
                         <li><a class="dropdown-item" href="{{ url_for('jc') }}">Job Market</a></li>
                         <li><a class="dropdown-item" href="{{ url_for('jm') }}">Jobs by Category</a></li>
-                        <li><a class="dropdown-item" href="{{ url_for('sa') }}">Salary by Jobs in California</a></li>
-                        <li><a class="dropdown-item" href="{{ url_for('ei') }}">Employment Distribution</a></li>
+                        <!-- <li><a class="dropdown-item" href="{{ url_for('sa') }}">Salary by Jobs in California</a></li> -->
+                        <li><a class="dropdown-item" href="{{ url_for('ei') }}">Salary Choropleth</a></li>
+                        <li><a class="dropdown-item" href="{{ url_for('sk') }}">Skills</a></li>
                         <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Machine Learning--Coming soon</a></li>
                       </ul>
                     </li>
               <li class="nav-item">
@@ -57,8 +57,8 @@
                         <li><a class="dropdown-item" href="{{ url_for('jm') }}">Jobs by Category</a></li>
                         <li><a class="dropdown-item" href="{{ url_for('sa') }}">Salary by Jobs in California</a></li>
                         <li><a class="dropdown-item" href="{{ url_for('ei') }}">Employment Distribution</a></li>
+                        <li><a class="dropdown-item" href="{{ url_for('sk') }}">Skills</a></li>
                         <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Machine Learning--Coming soon</a></li>
                       </ul>
                     </li>
               <li class="nav-item">
@@ -94,7 +94,7 @@
             <img alt='Job Satisfaction (Data Professionals) ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Jo&#47;JobSatisfactionofDataProfessionals&#47;JobSatisfactionDataProfessionals&#47;1_rss.png' style='border: none' />
             </a>
         </noscript>
-        <object class='tableauViz'  style='display:none;'>
+        <object class='tableauViz' style='display:none;'>
             <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
             <param name='embed_code_version' value='3' />
                 <param name='site_root' value='' />
