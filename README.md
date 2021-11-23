@@ -2,7 +2,7 @@
 Website: http://project3-us-job-market-analysis.azurewebsites.net/
 ## Project Description
 * Web Scraped job listings from [Indeed.com](https://www.indeed.com/) & [USAjob.gov](https://www.usajobs.gov/) using Python libraries Splinter and BeautifulSoup
-* In addition to web scraped data, took Job Satisfaction Survey of Data Professionals from [Kaggle.com](https://www.kaggle.com/phuchuynguyen/datarelated-developers-survey-by-stack-overflow)
+* In addition to web scraped data, took Job Satisfaction Survey of Data Professionals from [Kaggle.com](https://www.kaggle.com/)
 * Analysis on recent US job market split by Government and Non-Government
 * Comparison analysis on government jobs vs private/public sector jobs 
    * Map: clustered markers & customized markers via Leaflet
