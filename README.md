@@ -27,7 +27,7 @@ Website: http://project3-us-job-market-analysis.azurewebsites.net/
 
 ### Technologies used:
 
-* Python: Pandas, Matplotlib, Splinter and BeautifulSoup (for webscraping), [Nominatim and geopy](https://medium.com/analytics-vidhya/how-to-generate-lat-and-long-coordinates-of-city-without-using-apis-25ebabcaf1d5)(for geolocation)
+* Python: Pandas, Matplotlib, Splinter, BeautifulSoup, [Nominatim and geopy](https://medium.com/analytics-vidhya/how-to-generate-lat-and-long-coordinates-of-city-without-using-apis-25ebabcaf1d5)(for geolocation)
 * Javascript: Plotly, D3, Leaflet, [CanvasJS](https://canvasjs.com/javascript-charts/animated-chart/)
 * HTML & CSS: Bootstrap
 * Amazon S3
