@@ -16,8 +16,10 @@ Website: http://project3-us-job-market-analysis.azurewebsites.net/
 * Analysis of Number of Job Openings by Location and Job Category
    * Map : interactive maps depicting number of Job Openings by City and and State via Tableau
    * Bubble: organized Job Titles into categories and analyzed number of Job Openings by category
-* Analysis of Salary by Job Category, Location, and Skills using USAjobs Dataset
-   * Bar: interactive charts displaying data on Salary by Job Category, State, and Skills via Tableau
+* Analysis of Salary by Job Category, Location, Tools and Skills using USAjobs Dataset
+   * Bar: interactive charts displaying data on Salary by Job Category, State, Tools and Skills via Tableau
+   * Boxplot: interactive Box plot displaying a five-number summary of average salary for each Job Category
+   * Bubble: interactive chart displaying the count of Jobs based on each Tool
    * Map: interactive map depicting Number of Job Openings and Salary by State
 * Machine Learning - Salary Prediction: Loaded onto RDS and exported as csv files from [pgadmin](https://github.com/mriganv/Project-3-Project-4/blob/main/static/notebooks/Loading_ML_Model_Data.ipynb)
    * Model 1: Random Forest Classifier
