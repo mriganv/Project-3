@@ -14,6 +14,9 @@ Website: http://project3-us-job-market-analysis.azurewebsites.net/
    * Bar: animated and distributed by industry and occupation via Plotly
 * Statistical analysis on Occupations by state (2020)
    * Map: choropleth layers sorted by occupation via Leaflet -->
+* Analysis of Average Salary of Job Categories by Location
+   * Bar: interactive chart displaying by City and Company via Tableau
+   * Bubble: interactive chart displaying by State via Tableau
 
 ### Data Resources:
 
