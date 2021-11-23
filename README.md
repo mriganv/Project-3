@@ -30,6 +30,8 @@ Website: http://project3-us-job-market-analysis.azurewebsites.net/
 * Amazon S3
 * Amazon RDS Aurora, PostgreSQL
 * Tableau
+* Azure
+* Flask
 * JSON & GEOJSON
 * Excel
 
