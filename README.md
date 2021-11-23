@@ -20,7 +20,7 @@ Website: http://project3-us-job-market-analysis.azurewebsites.net/
 * [Indeed Jobs](https://us-job-market-mw.s3.us-west-2.amazonaws.com/mw_job_listings_scraped.csv)
 * [USA Government Jobs](https://us-job-market-mw.s3.us-west-2.amazonaws.com/mw_govjob_listings_scraped.csv)
 * [Job Satisfaction Survey (Data Professionals)](https://www.kaggle.com/phuchuynguyen/datarelated-developers-survey-by-stack-overflow)
-* [Other](https://github.com/mriganv/Project-3/tree/static/resources)
+* [Other](https://github.com/mriganv/Project-3-Project-4/tree/main/static/resources)
 
 ### Technologies used:
 
