@@ -112,6 +112,10 @@ def ei():
 @app.route("/skill")
 def sk():
     return render_template("job_desc_skills_mw.html")
+
+@app.route("/gov_job")
+def gj():
+    return render_template("cpj_best_jobs.html")
 # @app.route('/salary_prediction',methods=['GET', 'POST'])
 # def sp():
 #     if request.method == 'POST':
