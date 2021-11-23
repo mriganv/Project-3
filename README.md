@@ -5,11 +5,11 @@ Website: http://project3-us-job-market-analysis.azurewebsites.net/
 * In addition to web scraped data, took Job Satisfaction Survey of Data Professionals from [Kaggle.com](https://www.kaggle.com/)
 * Analysis on recent US job market split by Government and Non-Government
 * Comparison analysis on government jobs vs private/public sector jobs 
-   * Map: clustered markers & customized markers via Leaflet
-   * Bar: animated and distributed by job categories related to Data Professionals via [CanvasJS](https://canvasjs.com/javascript-charts/animated-chart/)
+   * [Map](http://project3-us-job-market-analysis.azurewebsites.net/job_market): clustered markers & customized markers via Leaflet
+   * [Bar](http://project3-us-job-market-analysis.azurewebsites.net/job_cat): animated and distributed by job categories related to Data Professionals via [CanvasJS](https://canvasjs.com/javascript-charts/animated-chart/)
 * Analysis of job descriptions across the two datasets - Government and Non-Government
-   * Bar: taken key words (skills and tools) from Job Descriptions and analyzing what skills companies are looking for when they hire Data Professionals
-   * Pie: Analysis of Job Satisfaction survey (taken by Data Professionals)
+   * [Bar](https://public.tableau.com/app/profile/marta.woodkowski/viz/SkillscompanieslookforwhenhireDataProfessionals/SkillscompanieslookforwhenhireDataProfessionals): taken key words (skills and tools) from Job Descriptions and analyzing what skills companies are looking for when they hire Data Professionals
+   * [Pie](https://public.tableau.com/app/profile/marta.woodkowski/viz/JobSatisfactionofDataProfessionals/JobSatisfactionDataProfessionals): Analysis of Job Satisfaction survey (taken by Data Professionals)
 * Analysis of Average Salary of Job Categories by Location using Indeed Dataset
    * Bar: interactive chart displaying by City and Company via Tableau
    * Bubble: interactive chart displaying by State via Tableau
