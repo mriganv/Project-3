@@ -109,6 +109,9 @@ def sa():
 def ei():
     return render_template("as_map.html")
 
+@app.route("/skill")
+def sk():
+    return render_template("job_desc_skills_mw.html")
 # @app.route('/salary_prediction',methods=['GET', 'POST'])
 # def sp():
 #     if request.method == 'POST':
