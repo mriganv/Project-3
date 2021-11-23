@@ -7,8 +7,9 @@ Website: http://project3-us-job-market-analysis.azurewebsites.net/
 * Comparison analysis on government jobs vs private/public sector jobs 
    * Map: clustered markers & customized markers via Leaflet
    * Bar: animated and distributed by job categories related to Data Professionals via [CanvasJS](https://canvasjs.com/javascript-charts/animated-chart/)
-   * Bar: taken key words (skills and tools) from Job Descriptions and analyzing what skills companies are looking for when they hire Data Professionals. 
-   * Pie: Analysis of Job Satisfaction survey (taken by Data Professionals).
+* Analysis of job descriptions across the two datasets - Government and Non-Government
+   * Bar: taken key words (skills and tools) from Job Descriptions and analyzing what skills companies are looking for when they hire Data Professionals
+   * Pie: Analysis of Job Satisfaction survey (taken by Data Professionals)
 <!-- * Analysis on salary by industry and occupation (2020)
    * Bar: animated and distributed by industry and occupation via Plotly
 * Statistical analysis on Occupations by state (2020)
