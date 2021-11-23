@@ -27,17 +27,17 @@
                         <li><a class="dropdown-item" href="{{ url_for('slides') }}">Visualization Slides</a></li>
                         <li><a class="dropdown-item" href="{{ url_for('jc') }}">Job Market</a></li>
                         <li><a class="dropdown-item" href="{{ url_for('jm') }}">Jobs by Category</a></li>
-                        <!-- <li><a class="dropdown-item" href="{{ url_for('sa') }}">Salary by Jobs in California</a></li> -->
                         <li><a class="dropdown-item" href="{{ url_for('ei') }}">Salary Choropleth</a></li>
                         <li><a class="dropdown-item" href="{{ url_for('sk') }}">Skills</a></li>
-                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="{{ url_for('gj') }}">Government Data Job</a></li>
+                        <!-- <li><hr class="dropdown-divider"></li> -->
                       </ul>
                     </li>
               <li class="nav-item">
                 <a class="nav-link active" href="{{ url_for('ei') }}"></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="https://github.com/mriganv/Project-3/tree/main/MAIN/static/resources">Data</a>
+                <a class="nav-link active" href="https://github.com/mriganv/Project-3-Project-4/tree/main/static/resources">Data</a>
               </li>
             </ul>
           </div>
@@ -58,14 +58,15 @@
                         <li><a class="dropdown-item" href="{{ url_for('sa') }}">Salary by Jobs in California</a></li>
                         <li><a class="dropdown-item" href="{{ url_for('ei') }}">Employment Distribution</a></li>
                         <li><a class="dropdown-item" href="{{ url_for('sk') }}">Skills</a></li>
-                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="{{ url_for('gj') }}">Government Data Job</a></li>
+                        <!-- <li><hr class="dropdown-divider"></li> -->
                       </ul>
                     </li>
               <li class="nav-item">
                 <a class="nav-link active" href="{{ url_for('ei') }}"></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="https://github.com/mriganv/Project-3/tree/main/MAIN/static/resources">Data</a>
+                <a class="nav-link active" href="https://github.com/mriganv/Project-3-Project-4/tree/main/static/resources">Data</a>
               </li>
             </ul>
         </div>
@@ -79,56 +80,33 @@
       </nav>
   </div>
 
-  <div class="container-fluid" id="tableau">
-    <div class="row justify-content-evenly align-items-start">
-    
-    <!-- Viz 1  -->
-    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 d-flex justify-content-start" style='background-color: #e0e8f0'>
-      <div class='tableauPlaceholder' id='viz1637632050016' style='position: relative'><noscript><a href='#'><img alt='Skills companies look for when hire Data Professionals ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Sk&#47;SkillscompanieslookforwhenhireDataProfessionals&#47;SkillscompanieslookforwhenhireDataProfessionals&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='SkillscompanieslookforwhenhireDataProfessionals&#47;SkillscompanieslookforwhenhireDataProfessionals' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Sk&#47;SkillscompanieslookforwhenhireDataProfessionals&#47;SkillscompanieslookforwhenhireDataProfessionals&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1637632050016');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='1000px';vizElement.style.height='827px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
-    </div>
+  <div class="container-fluid" style='background-color: #9faec0'>
+    <div class="row justify-content-center" style='margin-bottom:60px; background-color: #9faec0'> 
 
-  <!-- Viz 2  -->
-  <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 d-flex justify-content-start" style='background-color: #e0e8f0'>
-    <div class='tableauPlaceholder' id='viz1637620115891' style='position: relative'>
-        <noscript>
-        <a href='#'>
-            <img alt='Job Satisfaction (Data Professionals) ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Jo&#47;JobSatisfactionofDataProfessionals&#47;JobSatisfactionDataProfessionals&#47;1_rss.png' style='border: none' />
-            </a>
-        </noscript>
-        <object class='tableauViz' style='display:none;'>
-            <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
-            <param name='embed_code_version' value='3' />
-                <param name='site_root' value='' />
-            <param name='name' value='JobSatisfactionofDataProfessionals&#47;JobSatisfactionDataProfessionals' />
-            <param name='tabs' value='no' />
-            <param name='toolbar' value='yes' />
-            <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Jo&#47;JobSatisfactionofDataProfessionals&#47;JobSatisfactionDataProfessionals&#47;1.png' />
-            <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' />
-            <param name='display_overlay' value='yes' />
-            <param name='display_count' value='yes' />
-            <param name='language' value='en-US' />
-            </object>
-        </div>               
-        <script type='text/javascript'>                    
-            var divElement = document.getElementById('viz1637620115891');                    
-            var vizElement = divElement.getElementsByTagName('object')[0];                    
-            if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1000px';vizElement.style.height='827px';} 
-            else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1000px';vizElement.style.height='827px';}
-            else { vizElement.style.width='100%';vizElement.style.height='927px';}                     
-            var scriptElement = document.createElement('script');
-            scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
-            vizElement.parentNode.insertBefore(scriptElement, vizElement);               
-        </script>
-        </div>
+      <!-- Tableau Viz 1   -->
+      <div class='tableauPlaceholder' id='viz1637634100137' style='position: relative'><noscript><a href='#'><img alt='Skills companies look for when hire Data Professionals ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Sk&#47;SkillscompanieslookforwhenhireDataProfessionals&#47;SkillscompanieslookforwhenhireDataProfessionals&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='SkillscompanieslookforwhenhireDataProfessionals&#47;SkillscompanieslookforwhenhireDataProfessionals' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Sk&#47;SkillscompanieslookforwhenhireDataProfessionals&#47;SkillscompanieslookforwhenhireDataProfessionals&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1637634100137');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='1000px';vizElement.style.height='827px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
     </div>
+    <div class="row justify-content-center" style='background-color: #9faec0'>
+      <br><br>
+
+      <!-- Tableau Viz 2  -->
+      <div class='tableauPlaceholder' id='viz1637633245353' style='position: relative'><noscript><a href='#'><img alt='Job Satisfaction (Data Professionals) ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Jo&#47;JobSatisfactionofDataProfessionals&#47;JobSatisfactionDataProfessionals&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='JobSatisfactionofDataProfessionals&#47;JobSatisfactionDataProfessionals' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Jo&#47;JobSatisfactionofDataProfessionals&#47;JobSatisfactionDataProfessionals&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1637633245353');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1000px';vizElement.style.height='827px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1000px';vizElement.style.height='827px';} else { vizElement.style.width='100%';vizElement.style.height='927px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script></div>
+    </div>
+  </div>
 </div>
 
-
-  <!-- <script src="https://d3js.org/d3.v5.min.js"></script>
-  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-  <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
-  <script src="static/js/mw_bar_jobs_by_category.js"></script> -->
   <!-- Bootstrap core JS-->
+  <script type='text/javascript'>                    var divElement = document.getElementById('viz1637632050016');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='1000px';vizElement.style.height='827px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+  <script type='text/javascript'>                    
+    var divElement = document.getElementById('viz1637620115891');                    
+    var vizElement = divElement.getElementsByTagName('object')[0];                    
+    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1000px';vizElement.style.height='827px';} 
+    else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1000px';vizElement.style.height='827px';}
+    else { vizElement.style.width='100%';vizElement.style.height='927px';}                     
+    var scriptElement = document.createElement('script');
+    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
+    vizElement.parentNode.insertBefore(scriptElement, vizElement);               
+</script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
   </body>

@@ -24,6 +24,10 @@
   background-size: cover; 
 }
 
+#as_dash {
+  margin-bottom: 5%;
+}
+
 span{
     background-color:white !important;
 }

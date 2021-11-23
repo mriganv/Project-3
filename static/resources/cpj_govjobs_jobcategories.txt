@@ -1,0 +1,19 @@
+cpj_gov_jobs_category :
+
+Computer Scientist
+IT Specialist
+Operations Research Analyst
+Data Engineer
+Business Intelligence Specialist
+Research Analyst
+Chief Data Officer
+Enterprise Data Manager
+Management and Program Analyst
+Public Health Analyst
+Data Analyst
+Procurement Analyst
+Health Insurance Analyst
+Social Science Analyst
+Public Advisor
+Mathematical Analyst
+Economic Research Analyst

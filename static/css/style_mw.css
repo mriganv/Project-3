@@ -59,6 +59,7 @@ display: none;
 margin-bottom: 0px !important;
 z-index: 10000 !important;
 }
+
 #tableau {
     /* margin-left: 15px !important; */
     min-width: 2000px !important;
