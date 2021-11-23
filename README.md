@@ -10,13 +10,13 @@ Website: http://project3-us-job-market-analysis.azurewebsites.net/
 * Analysis of job descriptions across the two datasets - Government and Non-Government
    * Bar: taken key words (skills and tools) from Job Descriptions and analyzing what skills companies are looking for when they hire Data Professionals
    * Pie: Analysis of Job Satisfaction survey (taken by Data Professionals)
+* Analysis of Average Salary of Job Categories by Location
+   * Bar: interactive chart displaying by City and Company via Tableau
+   * Bubble: interactive chart displaying by State via Tableau
 <!-- * Analysis on salary by industry and occupation (2020)
    * Bar: animated and distributed by industry and occupation via Plotly
 * Statistical analysis on Occupations by state (2020)
    * Map: choropleth layers sorted by occupation via Leaflet -->
-* Analysis of Average Salary of Job Categories by Location
-   * Bar: interactive chart displaying by City and Company via Tableau
-   * Bubble: interactive chart displaying by State via Tableau
 
 ### Data Resources:
 
