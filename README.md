@@ -10,13 +10,24 @@ Website: http://project3-us-job-market-analysis.azurewebsites.net/
 * Analysis of job descriptions across the two datasets - Government and Non-Government
    * Bar: taken key words (skills and tools) from Job Descriptions and analyzing what skills companies are looking for when they hire Data Professionals
    * Pie: Analysis of Job Satisfaction survey (taken by Data Professionals)
-* Analysis of Average Salary of Job Categories by Location
+* Analysis of Average Salary of Job Categories by Location using Indeed Dataset
    * Bar: interactive chart displaying by City and Company via Tableau
    * Bubble: interactive chart displaying by State via Tableau
-<!-- * Analysis on salary by industry and occupation (2020)
-   * Bar: animated and distributed by industry and occupation via Plotly
-* Statistical analysis on Occupations by state (2020)
-   * Map: choropleth layers sorted by occupation via Leaflet -->
+* Analysis of Number of Job Openings by Location and Job Category
+   * Map : interactive maps depicting number of Job Openings by City and and State via Tableau
+   * Bubble: organized Job Titles into categories and analyzed number of Job Openings by category
+* Analysis of Salary by Job Category, Location, and Skills using USAjobs Dataset
+   * Bar: interactive charts displaying data on Salary by Job Category, State, and Skills via Tableau
+   * Map: interactive map depicting Number of Job Openings and Salary by State
+* Machine Learning - Salary Prediction: Loaded onto RDS and exported as csv files from [pgadmin](https://github.com/mriganv/Project-3-Project-4/blob/main/static/notebooks/Loading_ML_Model_Data.ipynb)
+   * Model 1: Random Forest Classifier
+      * Feature Type: all numeric using get_dummies
+      * Features: Job Titles, Salary, Skills
+      * Model Accuracy: 86% with 1 bin variance error
+   * Model 2: Random Forest Classifier
+      * Feature Type: part text, part numeric, combined using featureunion
+      * Features: 'Job Title', 'Job Description', 'Size', 'Industry', 'Salary', 'State', 'Age', Skills
+      * Model Accuracy: 79% with 1 bin variance error
 
 ### Data Resources:
 
