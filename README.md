@@ -1,6 +1,8 @@
 # Project 4: US Job Market Analysis
 Website: http://project3-us-job-market-analysis.azurewebsites.net/
 ## Project Description
+* Acquire data through Web Scraping job listings from [Indeed.com](https://www.indeed.com/) & [USAjob.gov](https://www.usajobs.gov/) using Python libraries Splinter and BeautifulSoup
+* In addition to web scraped data, took Job Satisfaction Survey of Data Professionals from [Kaggle.com](https://www.kaggle.com/)
 * Analysis on recent US job market split by Government and Non-Government
 * Comparison analysis on government jobs vs private/public sector jobs 
    * Map: clustered markers & customized markers via Leaflet
@@ -18,14 +20,14 @@ Website: http://project3-us-job-market-analysis.azurewebsites.net/
 
 ### Data Resources:
 
-* [Indeed Jobs](https://us-job-market-mw.s3.us-west-2.amazonaws.com/mw_job_listings_scraped.csv) webscraped from [Indeed](https://www.indeed.com/)
-* [USA Government Jobs](https://us-job-market-mw.s3.us-west-2.amazonaws.com/mw_govjob_listings_scraped.csv) webscraped from [USAjob](https://www.usajobs.gov/)
-* [Job Satisfaction Survey (Data Professionals)](https://www.kaggle.com/phuchuynguyen/datarelated-developers-survey-by-stack-overflow) from [Kaggle](https://www.kaggle.com/)
+* [Indeed Jobs](https://us-job-market-mw.s3.us-west-2.amazonaws.com/mw_job_listings_scraped.csv) 
+* [USA Government Jobs](https://us-job-market-mw.s3.us-west-2.amazonaws.com/mw_govjob_listings_scraped.csv)
+* [Job Satisfaction Survey (Data Professionals)](https://www.kaggle.com/phuchuynguyen/datarelated-developers-survey-by-stack-overflow) 
 * [Github resources folder](https://github.com/mriganv/Project-3-Project-4/tree/main/static/resources)
 
 ### Technologies used:
 
-* Python: Pandas, Matplotlib, Splinter and BeautifulSoup (for webscraping), [Nominatim and geopy](https://medium.com/analytics-vidhya/how-to-generate-lat-and-long-coordinates-of-city-without-using-apis-25ebabcaf1d5)(for geolocation)
+* Python: Pandas, Matplotlib, Splinter, BeautifulSoup, [Nominatim and geopy](https://medium.com/analytics-vidhya/how-to-generate-lat-and-long-coordinates-of-city-without-using-apis-25ebabcaf1d5)(for geolocation)
 * Javascript: Plotly, D3, Leaflet, [CanvasJS](https://canvasjs.com/javascript-charts/animated-chart/)
 * HTML & CSS: Bootstrap
 * Amazon S3
