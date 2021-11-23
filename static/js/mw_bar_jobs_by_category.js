@@ -27,6 +27,7 @@ function plotCanvas(data_canvas, main_title, y_title){
         labelFontSize:16,
         labelFontColor:"black",
         lineThickness:3,
+        interval: 100,
         margin:10
         },
         data: [{
