@@ -115,7 +115,7 @@ def sk():
 
 @app.route("/gov_job")
 def gj():
-    return render_template("cpj_best_jobs.html")
+    return render_template("cpj_gov_jobs.html")
 # @app.route('/salary_prediction',methods=['GET', 'POST'])
 # def sp():
 #     if request.method == 'POST':
