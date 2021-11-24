@@ -82,9 +82,9 @@ app = Flask(__name__)
 @app.route("/")
 def index():
     listings = {'_id':'615f3911a6d569a7cd86c945',
- 'url': 'https://www.cnbc.com/2021/10/04/here-are-the-five-most-valuable-college-majors-.html',
- 'img': 'https://image.cnbcfm.com/api/v1/image/106885838-1621509859148-gettyimages-1318999756-vcg111330726320.jpeg?v=1633354738&w=929&h=523',
- 'title': 'Here are the 5 most valuable — and 5 least valuable — college majors'}
+ 'url': 'https://www.sportspromedia.com/news/nfl-data-analytics-excitement-engagement-paul-ballew/',
+ 'img': 'https://dd20lazkioz9n.cloudfront.net/wp-content/uploads/2021/11/NFL-Data-NEWS.jpg',
+ 'title': 'NFL using data analytics to monitor excitement level of each game'}
     return render_template("index.html",listings=listings)
 
 @app.route("/slides")
