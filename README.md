@@ -1,4 +1,4 @@
-# Project 4: US Job Market Analysis
+# Project 4: US Job Market for Data Professionals
 Website: http://project3-us-job-market-analysis.azurewebsites.net/
 ## Project Description
 * Acquire data through Web Scraping job listings from [Indeed.com](https://www.indeed.com/) & [USAjob.gov](https://www.usajobs.gov/) using Python libraries Splinter and BeautifulSoup
