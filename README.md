@@ -48,7 +48,7 @@ Website: http://project3-us-job-market-analysis.azurewebsites.net/
 * Tableau
 * Azure
 * Flask
-* JSON & GEOJSON
+* JSON & GeoJSON
 * Excel
 
 
