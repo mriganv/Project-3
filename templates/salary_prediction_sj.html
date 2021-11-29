@@ -92,109 +92,108 @@
                       </nav>
                   </div>
 
-    <form action="{{ url_for('sp') }}" method="POST">
-      <h3>Salary Prediction</h3>
-      <fieldset>
-          <legend>Input values:</legend>
-          <div class="well">
-          <h5>Job Title</h5>
-          <select name="titles" id="selDataset1"></select>
-          </div>
-          <div class="well">
-            <h5>State</h5>
-            <select name="state" id="selDataset2"></select>
-          </div>
-
-            <div class="well">
-              <h5>Job Industry</h5>
-              <select name="industry" id="selDataset4"></select>
-              </div>
-
-            <div class="well">
-              <h5>Job Seniority</h5>
-              <select name="seniority" id="selDataset6"></select>
-              </div>
-          Company Size:
-          <input name="size"  type="number" required>
-          <br>
-          <br> Company Age:
-          <input name="age"   type="number" required>
-          <br>
-          <br>
-
-          <h5>Skills Required</h5>
-          <div class="checkbox-block">
-            <!--checkbox 1-->
-          <input class="checkbox-effect checkbox-effect-1" id="Python" type="checkbox" value="Python" name="Python"/>
-          <label for="Python">Python</label>
-          
-          <!--checkbox 2-->
-          <input class="checkbox-effect checkbox-effect-1" id="R" type="checkbox" value="R" name="R"/>
-          <label for="R">R</label>
-
-          <input class="checkbox-effect checkbox-effect-1" id="SQL" type="checkbox" value="SQL" name="SQL"/>
-          <label for="SQL">SQL</label>
-          </div>
-
-
-          <div class="checkbox-block">
-            <!--checkbox 1-->
-          <input class="checkbox-effect checkbox-effect-1" id="AWS" type="checkbox" value="AWS" name="AWS"/>
-          <label for="AWS">AWS</label>
-          
-          <!--checkbox 2-->
-          <input class="checkbox-effect checkbox-effect-1" id="Excel" type="checkbox" value="Excel" name="Excel"/>
-          <label for="Excel">Excel</label>
-
-          <input class="checkbox-effect checkbox-effect-1" id="GCP" type="checkbox" value="GCP" name="GCP"/>
-          <label for="GCP">GCP</label>
-          </div>
-
-          <div class="checkbox-block">
-            <!--checkbox 1-->
-          <input class="checkbox-effect checkbox-effect-1" id="Azure" type="checkbox" value="Azure" name="Azure"/>
-          <label for="Azure">Azure</label>
-          
-          <!--checkbox 2-->
-          <input class="checkbox-effect checkbox-effect-1" id="Spark" type="checkbox" value="Spark" name="Spark"/>
-          <label for="Spark">Spark</label>
-
-          </div>
-
-          <div class="checkbox-block">
-            <!--checkbox 1-->
-            <input class="checkbox-effect checkbox-effect-1" id="NoSQL" type="checkbox" value="NoSQL" name="NoSQL"/>
-          <label for="NoSQL">NoSQL</label>
-          
-          <!--checkbox 2-->
-
-          <input class="checkbox-effect checkbox-effect-1" id="Tableau" type="checkbox" value="Tableau" name="Tableau"/>
-          <label for="Tableau">Tableau</label>
-          </div>
-
-          <div class="checkbox-block">
-            <!--checkbox 1-->
-            <input class="checkbox-effect checkbox-effect-1" id="Scikit_Learn" type="checkbox" value="Keras" name="Keras"/>
-            <label for="Keras">Keras</label>
-          
-          <!--checkbox 2-->
-
-          <input class="checkbox-effect checkbox-effect-1" id="ml" type="checkbox" value="Machine_Learning" name="ml"/>
-          <label for="ml">Machine Learning</label>
-          </div>
-
-          <div class="checkbox-block">
-            <!--checkbox 1-->
-          <input class="checkbox-effect checkbox-effect-1" id="Hadoop" type="checkbox" value="Hadoop" name="Hadoop"/>
-          <label for="Hadoop">Hadoop</label>
-          
-          </div>
-          <input id="submit" type="submit">
-      </fieldset>
-  </form>
-  <div class="result" align="center">
-    {{pred}}
-  </div>
+                  <form action="{{ url_for('sp') }}" method="POST">
+                    <h3>Salary Prediction</h3>
+                    <fieldset>
+                        <legend>Input values:</legend>
+                        <div class="well">
+                        <h5>Job Group</h5>
+                        <select name="titles" id="selDataset1"></select>
+                        </div>
+                        <div class="well">
+                          <h5>State</h5>
+                          <select name="state" id="selDataset2"></select>
+                        </div>
+              
+                          <div class="well">
+                            <h5>Job Category</h5>
+                            <select name="industry" id="selDataset4"></select>
+                            </div>
+              
+                          <div class="well">
+                            <h5>Job Seniority</h5>
+                            <select name="seniority" id="selDataset6"></select>
+                            </div>
+              
+                        <h5>Skills Required</h5>
+                        <div class="checkbox-block">
+                          <!--checkbox 1-->
+                        <input class="checkbox-effect checkbox-effect-1" id="Python" type="checkbox" value="Python" name="Python"/>
+                        <label for="Python">Python</label>
+                        
+                        <!--checkbox 2-->
+                        <input class="checkbox-effect checkbox-effect-1" id="R" type="checkbox" value="R" name="R"/>
+                        <label for="R">R</label>
+              
+                        <input class="checkbox-effect checkbox-effect-1" id="SQL" type="checkbox" value="SQL" name="SQL"/>
+                        <label for="SQL">SQL</label>
+                        </div>
+              
+              
+                        <div class="checkbox-block">
+                          <!--checkbox 1-->
+                        <input class="checkbox-effect checkbox-effect-1" id="AWS" type="checkbox" value="AWS" name="AWS"/>
+                        <label for="AWS">AWS</label>
+                        
+                        <!--checkbox 2-->
+                        <input class="checkbox-effect checkbox-effect-1" id="Excel" type="checkbox" value="Excel" name="Excel"/>
+                        <label for="Excel">Excel</label>
+              
+                        <input class="checkbox-effect checkbox-effect-1" id="GCP" type="checkbox" value="GCP" name="GCP"/>
+                        <label for="GCP">GCP</label>
+                        </div>
+              
+                        <div class="checkbox-block">
+                          <!--checkbox 1-->
+                        <input class="checkbox-effect checkbox-effect-1" id="Azure" type="checkbox" value="Azure" name="Azure"/>
+                        <label for="Azure">Azure</label>
+                        
+                        <!--checkbox 2-->
+                        <input class="checkbox-effect checkbox-effect-1" id="Spark" type="checkbox" value="Spark" name="Spark"/>
+                        <label for="Spark">Spark</label>
+              
+                        </div>
+              
+                        <div class="checkbox-block">
+                          <!--checkbox 1-->
+                          <input class="checkbox-effect checkbox-effect-1" id="NoSQL" type="checkbox" value="NoSQL" name="NoSQL"/>
+                        <label for="NoSQL">NoSQL</label>
+                        
+                        <!--checkbox 2-->
+              
+                        <input class="checkbox-effect checkbox-effect-1" id="Tableau" type="checkbox" value="Tableau" name="Tableau"/>
+                        <label for="Tableau">Tableau</label>
+                        </div>
+              
+                        <div class="checkbox-block">
+                          <!--checkbox 1-->
+                          <input class="checkbox-effect checkbox-effect-1" id="Scikit_Learn" type="checkbox" value="Keras" name="Keras"/>
+                          <label for="Keras">Keras</label>
+                        
+                        <!--checkbox 2-->
+              
+                        <input class="checkbox-effect checkbox-effect-1" id="ml" type="checkbox" value="Machine_Learning" name="ml"/>
+                        <label for="ml">Machine Learning</label>
+                        </div>
+              
+                        <div class="checkbox-block">
+                          <!--checkbox 1-->
+                        <input class="checkbox-effect checkbox-effect-1" id="Hadoop" type="checkbox" value="Hadoop" name="Hadoop"/>
+                        <label for="Hadoop">Hadoop</label>
+              
+                        <input class="checkbox-effect checkbox-effect-1" id="AI" type="checkbox" value="AI" name="AI"/>
+                        <label for="AI">AI</label>
+              
+                        <input class="checkbox-effect checkbox-effect-1" id="Power BI" type="checkbox" value="Power BI" name="Power BI"/>
+                        <label for="Power BI">Power BI</label>
+                        
+                        </div>
+                        <input id="submit" type="submit">
+                    </fieldset>
+                </form>
+                <div class="result" align="center">
+                  {{pred}}
+                </div>
   <footer class="footer bg-light">
     <div class="container">
         <div class="row">
